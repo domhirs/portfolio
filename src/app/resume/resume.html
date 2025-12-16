@@ -1,3 +1,17 @@
-<section id="resume" class="min-h-screen flex items-center justify-center">
-  <h2 class="text-4xl">Resume</h2>
+<section id="resume" class="min-h-screen py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl text-center font-bold text-white mb-12">Resume</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <app-card [title]="'Education'" [subtitle]="'University of Example'">
+        <p class="text-gray-300">
+          Bachelor of Science in Computer Science
+        </p>
+      </app-card>
+      <app-card [title]="'Work Experience'" [subtitle]="'Tech Company Inc.'">
+        <p class="text-gray-300">
+          Software Engineer, 2020-Present
+        </p>
+      </app-card>
+    </div>
+  </div>
 </section>
