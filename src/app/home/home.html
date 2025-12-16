@@ -1,1 +1,30 @@
-<p>home works!</p>
+<main class="text-center">
+  <img
+    ngSrc="assets/picture.jpg"
+    alt="Profile Picture"
+    class="w-64 h-64 rounded-full mx-auto mb-4 object-cover"
+    width="256"
+    height="256"
+  />
+  <h1 class="text-5xl md:text-7xl font-bold text-white text-shadow-lg">
+    {{ title() }}
+  </h1>
+  <p class="mt-4 text-lg font-semibold text-white text-shadow-lg">
+    Full Stack Developer
+  </p>
+
+  <app-list>
+    <app-breadcrumb [label]="'Angular'">
+      <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2-7.5 11 3 7 4.5-4.5 4.5 4.5 3-7Z"/><path d="m12 2 7.5 11-3 7-4.5-4.5-4.5 4.5-3-7Z"/><path d="M12 2L4.5 13l3 7L12 15.5l4.5 4.5 3-7L12 2z"/><path d="M2 13h20"/><path d="M12 15.5L4.5 13l-3 7h21l-3-7-7.5 2.5z"/></svg>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'TypeScript'">
+      <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5h15"/><path d="M10 18.5v-13H7.5v13a2.5 2.5 0 0 0 5 0v-13H10"/><path d="M16.5 18.5v-13h-3v13a2.5 2.5 0 0 0 5 0v-13h-2"/></svg>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Node.js'">
+      <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 10v12l-3.5-2.5a2.5 2.5 0 0 1-1.5-3.5L9 4l6 2-6 2z"/><path d="M15 10v12l3.5-2.5a2.5 2.5 0 0 0 1.5-3.5L15 4l-6 2 6 2z"/></svg>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Tailwind CSS'">
+      <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2z"/><path d="M12 12s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2zM12 6s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2z"/><path d="M12 18s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2z"/></svg>
+    </app-breadcrumb>
+  </app-list>
+</main>
