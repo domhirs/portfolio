@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Header} from './header/header';
-import {Home} from './home/home';
+import { Header } from './header/header';
+import { Home } from './home/home';
 import { AboutComponent } from './about/about';
 import { ResumeComponent } from './resume/resume';
 import { ProjectsComponent } from './projects/projects';
