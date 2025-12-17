@@ -4,12 +4,15 @@ import { HomeComponent } from './home/home';
 import { AboutComponent } from './about/about';
 import { ResumeComponent } from './resume/resume';
 import { ProjectsComponent } from './projects/projects';
+import { provideIcons } from '@ng-icons/core';
+import { diAngularOriginal } from '@ng-icons/devicon/original';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  providers: [provideIcons({ diAngularOriginal })]
 })
 export class App {}
