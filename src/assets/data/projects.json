@@ -1,0 +1,16 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Portfolio Website",
+    "subtitle": "Angular & Tailwind CSS",
+    "description": "A personal portfolio site built with modern Angular, showcasing skills in front-end development and responsive design.",
+    "tags": ["Angular", "TypeScript", "Tailwind CSS", "JAMstack"]
+  },
+  {
+    "id": "proj-2",
+    "title": "E-Commerce Analytics Dashboard",
+    "subtitle": "Data Visualization with D3.js",
+    "description": "An interactive dashboard for visualizing sales data, customer behavior, and product performance.",
+    "tags": ["JavaScript", "D3.js", "API", "Data Viz"]
+  }
+]
