@@ -1,16 +1,95 @@
-<nav class="flex justify-center pt-8">
-  <ul class="flex list-none p-0">
-    <li class="mx-2">
-      <app-button [href]="'#home'" [label]="'Home'"></app-button>
-    </li>
-    <li class="mx-2">
-      <app-button [href]="'#about'" [label]="'About'"></app-button>
-    </li>
-    <li class="mx-2">
-      <app-button [href]="'#resume'" [label]="'Resume'"></app-button>
-    </li>
-    <li class="mx-2">
-      <app-button [href]="'#projects'" [label]="'Projects'"></app-button>
-    </li>
-  </ul>
-</nav>
+<div
+  class="flex flex-col items-center justify-center bg-primary-900 text-primary-100 transition-all duration-300 ease-in-out"
+  [class.min-h-screen]="!isShrunken()"
+  [class.h-24]="isShrunken()"
+  [class.fixed]="isShrunken()"
+  [class.top-0]="isShrunken()"
+  [class.left-0]="isShrunken()"
+  [class.right-0]="isShrunken()"
+  [class.z-50]="isShrunken()"
+  [class.bg-gray-800/80]="isShrunken()"
+  [class.backdrop-blur-sm]="isShrunken()"
+  [class.flex-row]="isShrunken()"
+  [class.justify-between]="isShrunken()"
+  [class.px-8]="isShrunken()"
+>
+  <!-- Main content area (image, title, subtitle) -->
+  <div
+    class="flex flex-col items-center transition-all duration-300 ease-in-out"
+    [class.flex-row]="isShrunken()"
+    [class.space-x-4]="isShrunken()"
+  >
+    <img
+      ngSrc="assets/picture.jpg"
+      alt="Profile Picture"
+      class="rounded-full object-cover transition-all duration-300 ease-in-out"
+      [class.w-64]="!isShrunken()"
+      [class.h-64]="!isShrunken()"
+      [class.mb-4]="!isShrunken()"
+      [class.w-12]="isShrunken()"
+      [class.h-12]="isShrunken()"
+      [class.mx-auto]="!isShrunken()"
+      width="256"
+      height="256"
+    />
+    <div
+      class="flex flex-col items-center transition-all duration-300 ease-in-out"
+      [class.flex-row]="isShrunken()"
+      [class.space-x-4]="isShrunken()"
+    >
+      <h1
+        class="font-bold text-white text-shadow-lg transition-all duration-300 ease-in-out"
+        [class.text-5xl]="!isShrunken()"
+        [class.md:text-7xl]="!isShrunken()"
+        [class.text-xl]="isShrunken()"
+      >
+        {{ title() }}
+      </h1>
+      @if (!isShrunken()) {
+        <p class="mt-4 text-lg font-semibold text-white text-shadow-lg">
+          Full Stack Developer
+        </p>
+      }
+    </div>
+  </div>
+
+  <!-- Skills list (only visible when not shrunken) -->
+  @if (!isShrunken()) {
+    <app-list>
+      <app-breadcrumb [label]="'Angular'">
+        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2-7.5 11 3 7 4.5-4.5 4.5 4.5 3-7Z"/><path d="m12 2 7.5 11-3 7-4.5-4.5-4.5 4.5-3-7Z"/><path d="M12 2L4.5 13l3 7L12 15.5l4.5 4.5 3-7L12 2z"/><path d="M2 13h20"/><path d="M12 15.5L4.5 13l-3 7h21l-3-7-7.5 2.5z"/></svg>
+      </app-breadcrumb>
+      <app-breadcrumb [label]="'TypeScript'">
+        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5h15"/><path d="M10 18.5v-13H7.5v13a2.5 2.5 0 0 0 5 0v-13H10"/><path d="M16.5 18.5v-13h-3v13a2.5 2.5 0 0 0 5 0v-13h-2"/></svg>
+      </app-breadcrumb>
+      <app-breadcrumb [label]="'Node.js'">
+        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 10v12l-3.5-2.5a2.5 2.5 0 0 1-1.5-3.5L9 4l6 2-6 2z"/><path d="M15 10v12l3.5-2.5a2.5 2.5 0 0 0 1.5-3.5L15 4l-6 2 6 2z"/></svg>
+      </app-breadcrumb>
+      <app-breadcrumb [label]="'Tailwind CSS'">
+        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2z"/><path d="M12 12s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2zM12 6s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2z"/><path d="M12 18s-4-2-8-2-8 2-8 2 4 2 8 2 8-2 8-2z"/></svg>
+      </app-breadcrumb>
+    </app-list>
+  }
+
+  <!-- Navigation (always visible, but styling changes) -->
+  <nav
+    class="transition-all duration-300 ease-in-out"
+    [class.pt-8]="!isShrunken()"
+    [class.pt-0]="isShrunken()"
+  >
+    <ul class="flex list-none p-0">
+      <li class="mx-2">
+        <app-button [href]="'#home'" [label]="'Home'"></app-button>
+      </li>
+      <li class="mx-2">
+        <app-button [href]="'#about'" [label]="'About'"></app-button>
+      </li>
+      <li class="mx-2">
+        <app-button [href]="'#resume'" [label]="'Resume'"></app-button>
+      </li>
+      <li class="mx-2">
+        <app-button [href]="'#projects'" [label]="'Projects'"></app-button>
+      </li>
+    </ul>
+  </nav>
+</div>
