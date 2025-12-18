@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Hintergrund: Ein abgerundetes Quadrat in einem dunklen Blau-Grau -->
+  <rect width="100" height="100" rx="15" ry="15" fill="#072F5F"/>
+
+  <!-- Text "DH": Zentriert, fett und weiß für maximale Lesbarkeit -->
+  <text
+    x="50%"
+    y="52%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Montserrat, sans-serif"
+    font-size="50"
+    font-weight="bold"
+    fill="#FFFFFF">
+    DH
+  </text>
+</svg>
