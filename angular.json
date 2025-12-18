@@ -29,7 +29,8 @@
                 "input": "public"
               },
               "src/favicon.svg",
-              "src/assets"
+              "src/assets",
+              "src/CNAME"
             ],
             "styles": [
               "src/tailwind.css",
