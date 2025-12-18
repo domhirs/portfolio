@@ -1,4 +1,4 @@
-import { Component, signal, HostListener } from '@angular/core';
+import { Component, signal, HostListener, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from '../components/button/button';
 
@@ -17,6 +17,7 @@ import { ButtonComponent } from '../components/button/button';
 export class Header {
   protected readonly title = signal('Dominik Hirsch');
   isScrolled = signal(false);
+  maintenance = input<boolean>();
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
