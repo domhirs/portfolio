@@ -1,6 +1,13 @@
 <a
   [attr.href]="href()"
-  class="inline-flex items-center justify-center text-sm font-medium text-gray-300 bg-gray-700/50 rounded-full px-4 py-2 hover:bg-gray-600/50 transition-colors duration-200 ease-in-out"
+  class="inline-flex items-center justify-center text-sm font-medium rounded-full px-4 py-2 transition-colors duration-200 ease-in-out"
+  [class.text-gray-300]="variant() === 'default'"
+  [class.bg-gray-700/50]="variant() === 'default'"
+  [class.hover:bg-gray-600/50]="variant() === 'default'"
+  [class.text-gray-900]="variant() === 'inverted'"
+  [class.bg-white]="variant() === 'inverted'"
+  [class.hover:bg-gray-200]="variant() === 'inverted'"
+  [class.shadow-lg]="variant() === 'inverted'"
 >
   {{ label() }}
 </a>

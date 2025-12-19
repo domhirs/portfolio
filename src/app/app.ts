@@ -1,4 +1,4 @@
-import { Component, signal, effect, inject, Renderer2 } from '@angular/core';
+import { Component, signal, effect, inject, Renderer2, computed } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Header } from './header/header';
 import { HomeComponent } from './home/home';
@@ -18,6 +18,13 @@ import { devIconProvider } from './icon.provider';
 export class App {
   maintenance = signal(false);
   isMenuOpen = signal(false);
+
+  // Obfuscated email construction
+  readonly contactHref = computed(() => {
+    const user = 'mail';
+    const domain = 'dhirsch.dev';
+    return `mailto:${user}@${domain}`;
+  });
 
   private readonly renderer = inject(Renderer2);
   private readonly document = inject(DOCUMENT);

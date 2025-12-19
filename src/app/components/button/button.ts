@@ -9,4 +9,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 export class ButtonComponent {
   href = input<string>();
   label = input<string>();
+  variant = input<'default' | 'inverted'>('default');
 }

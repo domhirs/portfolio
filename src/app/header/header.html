@@ -51,6 +51,11 @@
     </ul>
   </nav>
 
+  <!-- Right Side: Desktop Contact Button (Absolutely positioned) -->
+  <div class="absolute right-8 hidden md:flex items-center">
+    <app-button [href]="contactLink()" [label]="'Get in Contact'" [variant]="'inverted'"></app-button>
+  </div>
+
   <!-- Right Side: Burger Menu Button (Mobile only) -->
   <div class="flex md:hidden items-center">
     <button (click)="menuToggled.emit()" class="text-white p-2">
