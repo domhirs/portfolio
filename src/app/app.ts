@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, effect, inject, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { Header } from './header/header';
 import { HomeComponent } from './home/home';
 import { AboutComponent } from './about/about';
@@ -15,5 +16,23 @@ import { devIconProvider } from './icon.provider';
   providers: [devIconProvider]
 })
 export class App {
-  maintenance = signal(true);
+  maintenance = signal(false);
+  isMenuOpen = signal(false);
+
+  private readonly renderer = inject(Renderer2);
+  private readonly document = inject(DOCUMENT);
+
+  constructor() {
+    effect(() => {
+      if (this.isMenuOpen()) {
+        this.renderer.addClass(this.document.body, 'overflow-hidden');
+      } else {
+        this.renderer.removeClass(this.document.body, 'overflow-hidden');
+      }
+    });
+  }
+
+  toggleMenu() {
+    this.isMenuOpen.update(v => !v);
+  }
 }
