@@ -1,8 +1,13 @@
 import { provideIcons } from '@ng-icons/core';
 import {
-  diAngularOriginal, diDockerOriginal, diDotnetcoreOriginal, diEntityframeworkcoreOriginal,
+  diAngularOriginal,
+  diAzuredevopsOriginal,
+  diConfluenceOriginal,
+  diCsharpOriginal,
+  diCss3Original, diDatadogOriginal, diDockerOriginal, diDotnetcoreOriginal, diEntityframeworkcoreOriginal,
+  diEslintOriginal, diGitOriginal, diHtml5Original, diJavaOriginal, diLinuxOriginal,
   diMicrosoftsqlserverOriginal,
-  diNodejsOriginal, diPlaywrightOriginal,
+  diNodejsOriginal, diPlaywrightOriginal, diPowershellOriginal, diPrimengOriginal, diProxmoxOriginalWordmark,
   diTailwindcssOriginal,
   diTypescriptOriginal, diVitestOriginal
 } from '@ng-icons/devicon/original';
@@ -19,6 +24,20 @@ export const devIconProvider: (Provider | EnvironmentProviders)[] = [
     diVitestOriginal,
     diDockerOriginal,
     diEntityframeworkcoreOriginal,
-    diMicrosoftsqlserverOriginal
+    diMicrosoftsqlserverOriginal,
+    diDatadogOriginal,
+    diAzuredevopsOriginal,
+    diConfluenceOriginal,
+    diCsharpOriginal,
+    diCss3Original,
+    diEslintOriginal,
+    diGitOriginal,
+    diHtml5Original,
+    diLinuxOriginal,
+    diJavaOriginal,
+    diProxmoxOriginalWordmark,
+    diPrimengOriginal,
+    diPowershellOriginal
+
   }),
 ];
