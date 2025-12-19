@@ -15,9 +15,11 @@ import { ButtonComponent } from '../components/button/button';
   }
 })
 export class Header {
+  public readonly maintenance = input<boolean>();
+
   protected readonly title = signal('Dominik Hirsch');
   isScrolled = signal(false);
-  maintenance = input<boolean>();
+  isMenuOpen = signal(false);
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -6,4 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./list.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListComponent {}
+export class ListComponent {
+  title = input<string>();
+}
