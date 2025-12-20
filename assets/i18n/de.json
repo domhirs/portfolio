@@ -19,5 +19,8 @@
     "TITLE": "Lebenslauf",
     "EXPERIENCE": "Berufserfahrung",
     "EDUCATION": "Ausbildung"
+  },
+  "PROJECTS": {
+    "TITLE": "Projekte"
   }
 }
