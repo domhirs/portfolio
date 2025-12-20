@@ -1,12 +1,21 @@
 [
   {
+    "id": "PDev16",
+    "title": "Migration von Angular 16 nach Angular 21",
+    "subtitle": "Frontend Development | Angular 16 & Angular 21",
+    "description": "Aufarbeitung technischer Schulden, manuelle Migration der Angular Anwendung von Angular 16 nach Angular 21 inklusive eingesetzter Abhängigkeiten. Bedingt durch breaking Changes in PrimeNG - (Einführung eines neuen Stylingsystems) und langfristige Umstellung von PrimeFlex auf TailwindCSS.",
+    "tags": [".NET Core", "Angular 16", "OpenAI LLM", "Docker", "Azure DevOps", "Entity Framework", "SQL Server"],
+    "from": "12/2025",
+    "to": "heute"
+  },
+  {
     "id": "PDev15",
     "title": "KI-gestützte Multiplattform-Reiseapplikation",
     "subtitle": "Full-Stack Development | .NET Core & Angular 16",
     "description": "Verantwortlich für die Full-Stack-Weiterentwicklung einer mobilen Anwendung. Kernfokus lag auf der Konzeption und Implementierung innovativer KI-Features zur Reiseplanung mittels OpenAI LLMs. Zudem wurde die Skalierbarkeit durch eine vollständige Containerisierung der Three-Layer-Architektur und die Auflösung technischer Schulden signifikant verbessert.",
     "tags": [".NET Core", "Angular 16", "OpenAI LLM", "Docker", "Azure DevOps", "Entity Framework", "SQL Server"],
-    "from": "01/2024",
-    "to": "heute"
+    "from": "01/2025",
+    "to": "12/2025"
   },
   {
     "id": "PDev14",
