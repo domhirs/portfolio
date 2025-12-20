@@ -1,11 +1,12 @@
 import { Component, signal, input, output, inject } from '@angular/core';
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from '../components/button/button';
+import { NgIcon } from '@ng-icons/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage, ButtonComponent],
+  imports: [NgOptimizedImage, ButtonComponent, NgIcon],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   host: {
@@ -18,7 +19,8 @@ import { ButtonComponent } from '../components/button/button';
 export class Header {
   readonly maintenance = input<boolean>();
   readonly menuOpen = input<boolean>(false);
-  readonly contactLink = input<string>(''); // New input
+  readonly contactLink = input<string>('');
+  readonly cvLink = input<string>('');
   readonly menuToggled = output<void>();
 
   readonly title = signal('Dominik Hirsch');

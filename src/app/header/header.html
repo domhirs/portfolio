@@ -51,9 +51,10 @@
     </ul>
   </nav>
 
-  <!-- Right Side: Desktop Contact Button (Absolutely positioned) -->
-  <div class="absolute right-8 hidden md:flex items-center">
+  <!-- Right Side: Desktop Contact & CV Buttons (Absolutely positioned) -->
+  <div class="absolute right-8 hidden md:flex items-center gap-2">
     <app-button [href]="contactLink()" [label]="'Get in Contact'" [variant]="'inverted'"></app-button>
+    <app-button [href]="cvLink()" [label]="'Get CV'" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
   </div>
 
   <!-- Right Side: Burger Menu Button (Mobile only) -->

@@ -2,6 +2,7 @@
   [maintenance]="maintenance()"
   [menuOpen]="isMenuOpen()"
   [contactLink]="contactHref()"
+  [cvLink]="cvHref()"
   (menuToggled)="toggleMenu()"
 ></app-header>
 
@@ -17,9 +18,13 @@
         <li><a (click)="toggleMenu()" href="#about" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">About</a></li>
         <li><a (click)="toggleMenu()" href="#resume" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">Resume</a></li>
         <li><a (click)="toggleMenu()" href="#projects" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">Projects</a></li>
-        <li class="mt-4">
+        <li class="mt-4 flex flex-col gap-4 items-center">
           <a (click)="toggleMenu()" [href]="contactHref()" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors">
             Get in Contact
+          </a>
+          <a (click)="toggleMenu()" [href]="cvHref()" target="_blank" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
+            Get CV
+            <ng-icon name="matDownloadOutline"></ng-icon>
           </a>
         </li>
       </ul>

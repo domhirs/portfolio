@@ -11,6 +11,7 @@ import {
   diTailwindcssOriginal,
   diTypescriptOriginal, diVitestOriginal
 } from '@ng-icons/devicon/original';
+import { matDownloadOutline } from '@ng-icons/material-icons/outline';
 import {EnvironmentProviders, Provider} from '@angular/core';
 
 export const devIconProvider: (Provider | EnvironmentProviders)[] = [
@@ -37,7 +38,7 @@ export const devIconProvider: (Provider | EnvironmentProviders)[] = [
     diJavaOriginal,
     diProxmoxOriginalWordmark,
     diPrimengOriginal,
-    diPowershellOriginal
-
+    diPowershellOriginal,
+    matDownloadOutline
   }),
 ];

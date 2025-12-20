@@ -1,6 +1,7 @@
 <a
   [attr.href]="href()"
-  class="inline-flex items-center justify-center text-sm font-medium rounded-full px-4 py-2 transition-colors duration-200 ease-in-out"
+  [attr.target]="target()"
+  class="inline-flex items-center justify-center text-sm font-medium rounded-full px-4 py-2 transition-colors duration-200 ease-in-out gap-2"
   [class.text-gray-300]="variant() === 'default'"
   [class.bg-gray-700/50]="variant() === 'default'"
   [class.hover:bg-gray-600/50]="variant() === 'default'"
@@ -10,4 +11,7 @@
   [class.shadow-lg]="variant() === 'inverted'"
 >
   {{ label() }}
+  @if (icon()) {
+    <ng-icon [name]="icon()"></ng-icon>
+  }
 </a>
