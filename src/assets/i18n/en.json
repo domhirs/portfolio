@@ -1,0 +1,13 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "RESUME": "Resume",
+    "PROJECTS": "Projects",
+    "CONTACT": "Get in Contact",
+    "CV": "Get CV"
+  },
+  "MAINTENANCE": {
+    "MESSAGE": "The site is currently under construction"
+  }
+}

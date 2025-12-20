@@ -1,11 +1,12 @@
 import { Component, signal, input, output, inject } from '@angular/core';
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from '../components/button/button';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage, ButtonComponent],
+  imports: [NgOptimizedImage, ButtonComponent, TranslateModule],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   host: {
@@ -25,6 +26,8 @@ export class Header {
   readonly title = signal('Dominik Hirsch');
   readonly isScrolled = signal(false);
 
+  readonly translate = inject(TranslateService);
+
   private readonly document = inject(DOCUMENT);
   private readonly window = this.document.defaultView;
 
@@ -43,5 +46,9 @@ export class Header {
     const threshold = this.window.innerHeight / thresholdDivisor;
 
     this.isScrolled.set(scrollPosition > threshold);
+  }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
   }
 }

@@ -7,11 +7,12 @@ import { ResumeComponent } from './resume/resume';
 import { ProjectsComponent } from './projects/projects';
 import { devIconProvider } from './icon.provider';
 import { NgIcon } from '@ng-icons/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent, NgIcon],
+  imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent, NgIcon, TranslateModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
   providers: [devIconProvider]
@@ -29,10 +30,15 @@ export class App {
 
   readonly cvHref = signal('assets/files/Dominik_Hirsch_Full_Stack_Developer_CV_public.pdf');
 
+  readonly translate = inject(TranslateService);
+
   private readonly renderer = inject(Renderer2);
   private readonly document = inject(DOCUMENT);
 
   constructor() {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+
     effect(() => {
       if (this.isMenuOpen()) {
         this.renderer.addClass(this.document.body, 'overflow-hidden');
@@ -44,5 +50,9 @@ export class App {
 
   toggleMenu() {
     this.isMenuOpen.update(v => !v);
+  }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
   }
 }

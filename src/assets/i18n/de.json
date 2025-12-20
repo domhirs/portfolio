@@ -1,0 +1,13 @@
+{
+  "NAV": {
+    "HOME": "Startseite",
+    "ABOUT": "Über mich",
+    "RESUME": "Lebenslauf",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontaktieren",
+    "CV": "CV herunterladen"
+  },
+  "MAINTENANCE": {
+    "MESSAGE": "Die Seite befindet sich gerade im Aufbau"
+  }
+}

@@ -44,17 +44,24 @@
   <!-- Center: Desktop Navigation -->
   <nav class="hidden md:flex">
     <ul class="flex list-none p-0">
-      <li class="mx-2"><app-button [href]="'#home'" [label]="'Home'" i18n-label="@@nav.home"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#about'" [label]="'About'" i18n-label="@@nav.about"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#resume'" [label]="'Resume'" i18n-label="@@nav.resume"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#projects'" [label]="'Projects'" i18n-label="@@nav.projects"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#home'" [label]="'NAV.HOME' | translate"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#about'" [label]="'NAV.ABOUT' | translate"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#resume'" [label]="'NAV.RESUME' | translate"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#projects'" [label]="'NAV.PROJECTS' | translate"></app-button></li>
     </ul>
   </nav>
 
   <!-- Right Side: Desktop Contact & CV Buttons (Absolutely positioned) -->
   <div class="absolute right-8 hidden md:flex items-center gap-2">
-    <app-button [href]="contactLink()" [label]="'Get in Contact'" [variant]="'inverted'" i18n-label="@@nav.contact"></app-button>
-    <app-button [href]="cvLink()" [label]="'Get CV'" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'" i18n-label="@@nav.cv"></app-button>
+    <app-button [href]="contactLink()" [label]="'NAV.CONTACT' | translate" [variant]="'inverted'"></app-button>
+    <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
+
+    <!-- Language Switcher -->
+    @if (translate.currentLang === 'en') {
+      <button (click)="switchLanguage('de')" class="text-white font-bold hover:text-gray-300 transition-colors ml-2">DE</button>
+    } @else {
+      <button (click)="switchLanguage('en')" class="text-white font-bold hover:text-gray-300 transition-colors ml-2">EN</button>
+    }
   </div>
 
   <!-- Right Side: Burger Menu Button (Mobile only) -->
@@ -67,7 +74,7 @@
 
 <!-- Maintenance Bar -->
 @if (maintenance()) {
-  <div id="maintenance" class="bg-red-900 text-white text-center p-3 font-bold flex justify-center items-center" i18n="@@maintenance.message">
-    Die Seite befindet sich gerade im Aufbau
+  <div id="maintenance" class="bg-red-900 text-white text-center p-3 font-bold flex justify-center items-center">
+    {{ 'MAINTENANCE.MESSAGE' | translate }}
   </div>
 }
