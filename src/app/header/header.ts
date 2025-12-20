@@ -11,9 +11,7 @@ import { LanguageSelectorComponent } from '../components/language-selector/langu
   templateUrl: './header.html',
   styleUrl: './header.scss',
   host: {
-    'class': 'fixed top-0 left-0 right-0 z-50 h-24 transition-colors duration-300 ease-in-out',
-    '[class.bg-gray-800/80]': 'isScrolled()',
-    '[class.backdrop-blur-sm]': 'isScrolled()',
+    'class': 'fixed top-0 left-0 right-0 z-50 h-24 transition-colors duration-300 ease-in-out bg-gray-800/80 backdrop-blur-sm',
     '(window:scroll)': 'onWindowScroll()',
   }
 })
