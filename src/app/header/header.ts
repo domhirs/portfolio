@@ -1,12 +1,11 @@
 import { Component, signal, input, output, inject } from '@angular/core';
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from '../components/button/button';
-import { NgIcon } from '@ng-icons/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage, ButtonComponent, NgIcon],
+  imports: [NgOptimizedImage, ButtonComponent],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   host: {
