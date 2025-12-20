@@ -17,7 +17,7 @@ import { NgIcon } from '@ng-icons/core';
   providers: [devIconProvider]
 })
 export class App {
-  maintenance = signal(false);
+  maintenance = signal(true);
   isMenuOpen = signal(false);
 
   // Obfuscated email construction
