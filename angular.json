@@ -46,6 +46,9 @@
             ],
             "localize": [
               "de"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           },
           "configurations": {
