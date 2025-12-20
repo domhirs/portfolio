@@ -14,15 +14,15 @@
     </button>
     <nav>
       <ul class="flex flex-col items-center space-y-8">
-        <li><a (click)="toggleMenu()" href="#home" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">Home</a></li>
-        <li><a (click)="toggleMenu()" href="#about" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">About</a></li>
-        <li><a (click)="toggleMenu()" href="#resume" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">Resume</a></li>
-        <li><a (click)="toggleMenu()" href="#projects" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">Projects</a></li>
+        <li><a (click)="toggleMenu()" href="#home" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors" i18n="@@nav.home">Home</a></li>
+        <li><a (click)="toggleMenu()" href="#about" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors" i18n="@@nav.about">About</a></li>
+        <li><a (click)="toggleMenu()" href="#resume" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors" i18n="@@nav.resume">Resume</a></li>
+        <li><a (click)="toggleMenu()" href="#projects" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors" i18n="@@nav.projects">Projects</a></li>
         <li class="mt-4 flex flex-col gap-4 items-center">
-          <a (click)="toggleMenu()" [href]="contactHref()" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+          <a (click)="toggleMenu()" [href]="contactHref()" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors" i18n="@@nav.contact">
             Get in Contact
           </a>
-          <a (click)="toggleMenu()" [href]="cvHref()" target="_blank" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
+          <a (click)="toggleMenu()" [href]="cvHref()" target="_blank" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors flex items-center gap-2" i18n="@@nav.cv">
             Get CV
             <ng-icon name="matDownloadOutline"></ng-icon>
           </a>

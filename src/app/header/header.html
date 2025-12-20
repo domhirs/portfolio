@@ -44,17 +44,17 @@
   <!-- Center: Desktop Navigation -->
   <nav class="hidden md:flex">
     <ul class="flex list-none p-0">
-      <li class="mx-2"><app-button [href]="'#home'" [label]="'Home'"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#about'" [label]="'About'"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#resume'" [label]="'Resume'"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#projects'" [label]="'Projects'"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#home'" [label]="'Home'" i18n-label="@@nav.home"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#about'" [label]="'About'" i18n-label="@@nav.about"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#resume'" [label]="'Resume'" i18n-label="@@nav.resume"></app-button></li>
+      <li class="mx-2"><app-button [href]="'#projects'" [label]="'Projects'" i18n-label="@@nav.projects"></app-button></li>
     </ul>
   </nav>
 
   <!-- Right Side: Desktop Contact & CV Buttons (Absolutely positioned) -->
   <div class="absolute right-8 hidden md:flex items-center gap-2">
-    <app-button [href]="contactLink()" [label]="'Get in Contact'" [variant]="'inverted'"></app-button>
-    <app-button [href]="cvLink()" [label]="'Get CV'" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
+    <app-button [href]="contactLink()" [label]="'Get in Contact'" [variant]="'inverted'" i18n-label="@@nav.contact"></app-button>
+    <app-button [href]="cvLink()" [label]="'Get CV'" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'" i18n-label="@@nav.cv"></app-button>
   </div>
 
   <!-- Right Side: Burger Menu Button (Mobile only) -->
@@ -67,7 +67,7 @@
 
 <!-- Maintenance Bar -->
 @if (maintenance()) {
-  <div id="maintenance" class="bg-red-900 text-white text-center p-3 font-bold flex justify-center items-center">
+  <div id="maintenance" class="bg-red-900 text-white text-center p-3 font-bold flex justify-center items-center" i18n="@@maintenance.message">
     Die Seite befindet sich gerade im Aufbau
   </div>
 }
