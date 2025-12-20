@@ -27,9 +27,9 @@
             <ng-icon name="matDownloadOutline"></ng-icon>
           </a>
 
-          <!-- Mobile Language Switcher -->
+          <!-- Mobile Language Switcher (Disabled) -->
           <div class="mt-4">
-            <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
+            <app-language-selector [currentLang]="translate.currentLang" [disabled]="true" (languageChange)="switchLanguage($event)"></app-language-selector>
           </div>
         </li>
       </ul>

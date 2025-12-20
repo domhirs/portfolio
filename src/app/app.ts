@@ -37,8 +37,8 @@ export class App {
   private readonly document = inject(DOCUMENT);
 
   constructor() {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
 
     effect(() => {
       if (this.isMenuOpen()) {

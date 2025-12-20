@@ -9,9 +9,12 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
 })
 export class LanguageSelectorComponent {
   currentLang = input.required<string>();
+  disabled = input<boolean>(false);
   languageChange = output<string>();
 
   selectLanguage(lang: string) {
+    if (this.disabled()) return;
+
     if (lang !== this.currentLang()) {
       this.languageChange.emit(lang);
     }
