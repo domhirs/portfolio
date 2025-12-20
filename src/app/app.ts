@@ -19,7 +19,7 @@ import { LanguageSelectorComponent } from './components/language-selector/langua
   providers: [devIconProvider]
 })
 export class App {
-  maintenance = signal(true);
+  maintenance = signal(false);
   isMenuOpen = signal(false);
 
   // Obfuscated email construction
