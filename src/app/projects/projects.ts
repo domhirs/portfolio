@@ -1,14 +1,15 @@
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {DataService} from '../data.service';
 import {toSignal} from '@angular/core/rxjs-interop';
-import {ProjectCard} from './project-card/project-card';
+import { CardComponent } from '../components/card/card';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   templateUrl: './projects.html',
   styleUrls: ['./projects.scss'],
-  imports: [ProjectCard],
+  imports: [CardComponent, TranslatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent {

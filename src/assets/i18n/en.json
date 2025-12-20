@@ -19,5 +19,8 @@
     "TITLE": "Resume",
     "EXPERIENCE": "Work Experience",
     "EDUCATION": "Education"
+  },
+  "PROJECTS": {
+    "TITLE": "Projects"
   }
 }
