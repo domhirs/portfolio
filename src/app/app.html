@@ -29,11 +29,7 @@
 
           <!-- Mobile Language Switcher -->
           <div class="mt-4">
-            @if (translate.currentLang === 'en') {
-              <button (click)="switchLanguage('de')" class="text-2xl font-bold text-white hover:text-gray-300 transition-colors">DE</button>
-            } @else {
-              <button (click)="switchLanguage('en')" class="text-2xl font-bold text-white hover:text-gray-300 transition-colors">EN</button>
-            }
+            <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
           </div>
         </li>
       </ul>

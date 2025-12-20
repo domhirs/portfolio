@@ -51,17 +51,11 @@
     </ul>
   </nav>
 
-  <!-- Right Side: Desktop Contact & CV Buttons (Absolutely positioned) -->
-  <div class="absolute right-8 hidden md:flex items-center gap-2">
+  <!-- Right Side: Desktop Contact, CV, and Language Buttons (Absolutely positioned) -->
+  <div class="absolute right-8 hidden md:flex items-center gap-4">
     <app-button [href]="contactLink()" [label]="'NAV.CONTACT' | translate" [variant]="'inverted'"></app-button>
     <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
-
-    <!-- Language Switcher -->
-    @if (translate.currentLang === 'en') {
-      <button (click)="switchLanguage('de')" class="text-white font-bold hover:text-gray-300 transition-colors ml-2">DE</button>
-    } @else {
-      <button (click)="switchLanguage('en')" class="text-white font-bold hover:text-gray-300 transition-colors ml-2">EN</button>
-    }
+    <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
   </div>
 
   <!-- Right Side: Burger Menu Button (Mobile only) -->

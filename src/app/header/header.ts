@@ -2,11 +2,12 @@ import { Component, signal, input, output, inject } from '@angular/core';
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from '../components/button/button';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { LanguageSelectorComponent } from '../components/language-selector/language-selector';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage, ButtonComponent, TranslateModule],
+  imports: [NgOptimizedImage, ButtonComponent, TranslateModule, LanguageSelectorComponent],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   host: {

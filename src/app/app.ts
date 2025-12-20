@@ -8,11 +8,12 @@ import { ProjectsComponent } from './projects/projects';
 import { devIconProvider } from './icon.provider';
 import { NgIcon } from '@ng-icons/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { LanguageSelectorComponent } from './components/language-selector/language-selector';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent, NgIcon, TranslateModule],
+  imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent, NgIcon, TranslateModule, LanguageSelectorComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
   providers: [devIconProvider]
