@@ -17,14 +17,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "de": {
-            "translation": "src/locale/messages.de.xlf"
-          }
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -43,9 +35,6 @@
             "styles": [
               "src/tailwind.css",
               "src/styles.css"
-            ],
-            "localize": [
-              "de"
             ],
             "polyfills": [
               "@angular/localize/init"
