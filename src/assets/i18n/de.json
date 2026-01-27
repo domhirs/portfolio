@@ -1,0 +1,26 @@
+{
+  "NAV": {
+    "HOME": "Startseite",
+    "ABOUT": "Über mich",
+    "RESUME": "Lebenslauf",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontaktieren",
+    "CV": "CV herunterladen"
+  },
+  "MAINTENANCE": {
+    "MESSAGE": "Die Seite befindet sich gerade im Aufbau"
+  },
+  "ABOUT": {
+    "TITLE": "Über mich",
+    "TEXT": "Als leidenschaftlicher Full Stack Developer konzentriere ich mich auf den Aufbau skalierbarer und leistungsfähiger Webanwendungen. Dank meiner Erfahrung mit modernen Frontend-Frameworks wie Angular und Backend-Technologien wie Node.js und .NET begeistert es mich, komplexe Herausforderungen zu meistern und erstklassige Softwarelösungen zu entwickeln.",
+    "SUBTEXT": "Die Einarbeitung in neue Technologien und die stetige Weiterentwicklung meiner Fähigkeiten sind für mich essenziell, um moderne und zukunftssichere Lösungen zu entwickeln."
+  },
+  "RESUME": {
+    "TITLE": "Lebenslauf",
+    "EXPERIENCE": "Berufserfahrung",
+    "EDUCATION": "Ausbildung"
+  },
+  "PROJECTS": {
+    "TITLE": "Projekte"
+  }
+}

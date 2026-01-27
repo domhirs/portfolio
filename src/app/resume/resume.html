@@ -1,0 +1,38 @@
+<section class="min-h-dvh w-full py-20">
+  <div class="container mx-auto px-4 w-full">
+    <h2 class="text-4xl text-center font-bold text-white mb-12">{{ 'RESUME.TITLE' | translate }}</h2>
+
+    <!-- Work Experience Section -->
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-white mb-8">{{ 'RESUME.EXPERIENCE' | translate }}</h3>
+      <div class="grid grid-cols-1 gap-8 mb-16">
+        @for (item of workExperience(); track item.company) {
+          <app-card [title]="item.position" [subtitle]="item.company + ' | ' + item.from + ' - ' + item.to">
+            <p class="text-gray-300 mb-4">{{ item.description }}</p>
+            @if (item.technologies && item.technologies.length > 0) {
+              <div class="flex flex-wrap gap-2">
+                @for (tech of item.technologies; track tech) {
+                  <span class="bg-gray-700/50 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">{{ tech }}</span>
+                }
+              </div>
+            }
+          </app-card>
+        }
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-white mb-8">{{ 'RESUME.EDUCATION' | translate }}</h3>
+      <div class="grid grid-cols-1 gap-8">
+        @for (item of education(); track item.institution) {
+          <app-card [title]="item.title" [subtitle]="item.institution + ' | ' + item.from + ' - ' + item.to">
+            @if (item.description) {
+              <p class="text-gray-300">{{ item.description }}</p>
+            }
+          </app-card>
+        }
+      </div>
+    </div>
+  </div>
+</section>

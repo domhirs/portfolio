@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+html {
+  @apply bg-sky-200 dark:bg-sky-950 dark:text-shadow-sky-100;
+}
+
+body {
+  @apply overflow-x-hidden;
+  overscroll-behavior-y: none;
+}

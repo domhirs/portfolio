@@ -1,0 +1,56 @@
+<section class="min-h-dvh w-full flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+  <img
+    ngSrc="assets/picture.png"
+    alt="Profile Picture"
+    class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover mb-4"
+    width="512"
+    height="512"
+  />
+  <h1 class="text-4xl md:text-7xl font-bold text-white text-shadow-lg wrap-break-word max-w-full">{{ title() }}</h1>
+  <p class="mt-4 text-base md:text-lg font-semibold text-white text-shadow-lg">Full Stack Developer</p>
+
+  <app-list [title]="'Frontend'">
+    <app-breadcrumb [label]="'Angular'">
+      <ng-icon name="diAngularOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'TypeScript'">
+      <ng-icon name="diTypescriptOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Tailwind CSS'">
+      <ng-icon name="diTailwindcssOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Jest'">
+      <ng-icon name="diJestPlain" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Playwright'">
+      <ng-icon name="diPlaywrightOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+  </app-list>
+
+  <app-list [title]="'Backend'">
+    <app-breadcrumb [label]="'C#'">
+      <ng-icon name="diDotnetcoreOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Entity Framework'">
+      <ng-icon name="diEntityframeworkcoreOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Microsoft SQL Server'">
+      <ng-icon name="diMicrosoftsqlserverOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+  </app-list>
+
+  <app-list [title]="'DevOps'">
+    <app-breadcrumb [label]="'Docker'">
+      <ng-icon name="diDockerOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Azure Devops'">
+      <ng-icon name="diAzuredevopsOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Shell'">
+      <ng-icon name="diPowershellOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Datadog'">
+      <ng-icon name="diDatadogOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+  </app-list>
+</section>

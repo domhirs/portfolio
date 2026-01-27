@@ -1,0 +1,19 @@
+<section class="min-h-dvh w-full py-20">
+  <div class="container mx-auto px-4 w-full">
+    <h2 class="text-4xl text-center font-bold text-white mb-12"> {{ 'PROJECTS.TITLE' | translate }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      @for (project of projects(); track project.id) {
+        <app-card [title]="project.title" [subtitle]="project.subtitle">
+          <p class="text-gray-300 mb-4">{{ project.description }}</p>
+          @if (project.tags && project.tags.length > 0) {
+            <div class="flex flex-wrap gap-2">
+              @for (tag of project.tags; track tag) {
+                <span class="bg-gray-700/50 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">{{ tag }}</span>
+              }
+            </div>
+          }
+        </app-card>
+      }
+    </div>
+  </div>
+</section>

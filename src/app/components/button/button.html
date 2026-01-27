@@ -1,0 +1,10 @@
+<a
+  [attr.href]="href()"
+  [attr.target]="target()"
+  [class]="buttonClasses()"
+>
+  {{ label() }}
+  @if (icon()) {
+    <ng-icon [name]="icon()"></ng-icon>
+  }
+</a>

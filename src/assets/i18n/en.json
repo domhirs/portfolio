@@ -1,0 +1,26 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "RESUME": "Resume",
+    "PROJECTS": "Projects",
+    "CONTACT": "Get in Contact",
+    "CV": "Get CV"
+  },
+  "MAINTENANCE": {
+    "MESSAGE": "The site is currently under construction"
+  },
+  "ABOUT": {
+    "TITLE": "About Me",
+    "TEXT": "I am a passionate Full Stack Developer with a strong focus on building scalable and performant web applications. With expertise in modern frontend frameworks like Angular and backend technologies like Node.js and .NET, I enjoy solving complex problems and delivering high-quality software solutions.",
+    "SUBTEXT": "I am always eager to learn new technologies and improve my skills to stay up-to-date with the latest industry trends."
+  },
+  "RESUME": {
+    "TITLE": "Resume",
+    "EXPERIENCE": "Work Experience",
+    "EDUCATION": "Education"
+  },
+  "PROJECTS": {
+    "TITLE": "Projects"
+  }
+}
