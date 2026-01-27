@@ -1,0 +1,146 @@
+[
+  {
+    "id": "16",
+    "title": "Migration von Angular 16 nach Angular 21",
+    "subtitle": "Frontend Development | Angular 16 & Angular 21",
+    "description": "Aufarbeitung technischer Schulden, manuelle Migration der Angular Anwendung von Angular 16 nach Angular 21 inklusive eingesetzter Abhängigkeiten. Bedingt durch breaking Changes in PrimeNG - (Einführung eines neuen Stylingsystems) und langfristige Umstellung von PrimeFlex auf TailwindCSS.",
+    "tags": ["Angular 21", "PrimeNG", "TailwindCSS", "Capacitor"],
+    "from": "12/2025",
+    "to": "heute"
+  },
+  {
+    "id": "15",
+    "title": "KI-gestützte Multiplattform-Reiseapplikation",
+    "subtitle": "Full-Stack Development | .NET Core & Angular 16",
+    "description": "Verantwortlich für die Full-Stack-Weiterentwicklung einer mobilen Anwendung. Kernfokus lag auf der Konzeption und Implementierung innovativer KI-Features zur Reiseplanung mittels OpenAI LLMs. Zudem wurde die Skalierbarkeit durch eine vollständige Containerisierung der Three-Layer-Architektur und die Auflösung technischer Schulden signifikant verbessert.",
+    "tags": [".NET Core", "Angular 16", "OpenAI LLM", "Docker", "Azure DevOps", "Entity Framework", "SQL Server"],
+    "from": "01/2025",
+    "to": "12/2025"
+  },
+  {
+    "id": "14",
+    "title": "E2E-Testautomatisierung & Testinfrastruktur",
+    "subtitle": "QA Engineering | Playwright & TypeScript",
+    "description": "Entwicklung und Aufbau einer internationalen E2E-Testinfrastruktur im SCRUM-Umfeld. Dies umfasste die strategische Planung von Testfällen, die technische Implementierung automatisierter Tests mit Playwright sowie die Integration in CI/CD-Pipelines zur Sicherstellung höchster Softwarequalität.",
+    "tags": ["TypeScript", "Playwright", "Azure DevOps", "CI/CD", "SCRUM", "Automotive"],
+    "from": "03/2022",
+    "to": "12/2024"
+  },
+  {
+    "id": "13",
+    "title": "Modernisierung & Support Lagersteuerungssystem",
+    "subtitle": "Datenbankentwicklung | VBA & SQL Server",
+    "description": "Langfristige Betreuung und Optimierung einer kritischen Lagersteuerungslösung. Fokus auf der Stabilisierung des Systems durch gezielte Fehleranalysen, Bugfixes und Performance-Optimierungen an der SQL-Server-Schnittstelle.",
+    "tags": ["VBA", "MS SQL Server", "MS Access", "Business Logic"],
+    "from": "03/2022",
+    "to": "heute"
+  },
+  {
+    "id": "12",
+    "title": "Weiterentwicklung PLM-System (Aras Innovator)",
+    "subtitle": "Backend & Integration | C# & AML",
+    "description": "Mitarbeit in einem agilen Team zur Erweiterung einer PLM-Plattform im Industriesektor. Umsetzung komplexer Business-Logik im Backend sowie Datenstruktur-Anpassungen mittels AML (Aras Markup Language) und C#.",
+    "tags": ["C#", ".NET Framework", "Aras Innovator", "AML", "SQL Server", "Docker"],
+    "from": "05/2022",
+    "to": "11/2022"
+  },
+  {
+    "id": "11",
+    "title": "Reporting-Lösungen für ALM-Systeme",
+    "subtitle": "PoC & Tooling | Java & Docker",
+    "description": "Erfolgreiche Durchführung eines Proof of Concepts zur Erweiterung von Intland Codebeamer ALM. Entwicklung individueller Java-basierter Reporting-Widgets innerhalb einer containerisierten Entwicklungsumgebung.",
+    "tags": ["Java", "Docker", "MySQL", "Codebeamer ALM"],
+    "from": "01/2022",
+    "to": "03/2022"
+  },
+  {
+    "id": "10",
+    "title": "Interaktives KPI-Dashboard & Logik-Editor",
+    "subtitle": "Frontend-Architektur | Angular & TypeScript",
+    "description": "Konzeption und Realisierung eines hochperformanten Web-Frontends zur Visualisierung von Kennzahlen. Highlight war die Entwicklung eines grafischen Drag-and-Drop-Baukastens zur intuitiven Modellierung komplexer Logik-Workflows.",
+    "tags": ["Angular", "TypeScript", "mxGraph", "DevExtreme", "Bootstrap", "REST API"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "9",
+    "title": "Scalable REST API & Daten-Transformation",
+    "subtitle": "Backend-Architektur | .NET Core & ASP.NET WebAPI",
+    "description": "Design und Implementierung einer zentralen Schnittstellen-Architektur zur Verarbeitung komplexer Datenimporte. Inklusive Migration der Bestandsanwendung auf .NET Core 3.1 sowie Implementierung eines rollenbasierten Zugriffskonzepts.",
+    "tags": ["C#", ".NET Core", "ASP.NET WebAPI", "Dapper", "T-SQL", "Unit Testing"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "8",
+    "title": "ETL-Datenbankmodellierung & Performance",
+    "subtitle": "Database Engineering | MS SQL Server",
+    "description": "Entwurf und Implementierung einer hochflexiblen, historisierten Datenbankarchitektur. Optimierung von ETL-Prozessen zur effizienten Verarbeitung unspezifischer Datenmengen inklusive Wartungs- und Migrationsstrategien.",
+    "tags": ["MS SQL", "T-SQL", "Database Design", "ETL", "XML/XSD"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "7",
+    "title": "Automatisierung durch Windows Services",
+    "subtitle": "Backend-Automatisierung | C# & Multithreading",
+    "description": "Entwicklung eines robusten Windows-Services zur Automatisierung paralleler Datenimporte. Steigerung des Durchsatzes durch den Einsatz der Task Parallel Library (TPL) und intelligentes Loadbalancing.",
+    "tags": ["C#", ".NET Framework", "Multithreading", "TPL", "SQL Server"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "6",
+    "title": "Enterprise Excel-Addins für Datentransfer",
+    "subtitle": "Office Integration | C# & VSTO",
+    "description": "Entwicklung professioneller Excel-VSTO-Addins zur Prozessoptimierung. Automatisierte Extraktion und Validierung von Fachdaten in XML-Strukturen zur nahtlosen Integration in nachgelagerte Systeme.",
+    "tags": ["C#", "VSTO", "WinForms", "XML", ".NET Framework"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "5",
+    "title": "Sicherheitskritische Lizenzverwaltung",
+    "subtitle": "Application Security | C# & RSA",
+    "description": "Entwicklung einer Desktop-Anwendung zur Verwaltung RSA-verschlüsselter Softwarelizenzen. Fokus auf Datensicherheit und Benutzerführung innerhalb der Lizenzierungsprozesse.",
+    "tags": ["C#", "WinForms", "RSA Verschlüsselung", "Dapper", "SQL Server"],
+    "from": "04/2020",
+    "to": "05/2020"
+  },
+  {
+    "id": "4",
+    "title": "Prototyping für Datenmanagementsysteme",
+    "subtitle": "Web Development | ASP.NET MVC",
+    "description": "Erstellung einer Machbarkeitsstudie und Umsetzung eines webbasierten Prototyps zur dynamischen Datenverwaltung. Einsatz moderner Webtechnologien zur Demonstration flexibler Datenstrukturen.",
+    "tags": ["ASP.NET MVC", "jQuery", "C#", "Entity Framework"],
+    "from": "04/2018",
+    "to": "09/2018"
+  },
+  {
+    "id": "3",
+    "title": "Digitalisierung von PLM-Workflows",
+    "subtitle": "Prozessoptimierung | C# & VSTO",
+    "description": "Analyse und digitale Transformation manueller Workflows im Engineering-Umfeld. Entwicklung von Automatisierungslösungen zur Migration historisierter Datensätze in PLM-Systeme.",
+    "tags": ["C#", "VSTO", "WinForms", "Prozessanalyse"],
+    "from": "03/2018",
+    "to": "01/2020"
+  },
+  {
+    "id": "2",
+    "title": "Webbasierte Arbeitszeiterfassung & HR-Workflows",
+    "subtitle": "Web Application | ASP.NET WebForms",
+    "description": "Langfristige Modernisierung einer Enterprise-Anwendung für das Zeitmanagement. Implementierung komplexer Genehmigungsworkflows (Urlaubsanträge) und Erstellung automatisierter Berichte mittels SSRS.",
+    "tags": ["C#", "ASP.NET WebForms", "SSRS", "SQL Server", "JavaScript"],
+    "from": "09/2017",
+    "to": "2020"
+  },
+  {
+    "id": "1",
+    "title": "ETL-Infrastruktur & DWH-Management",
+    "subtitle": "Business Intelligence | SSIS & SSRS",
+    "description": "Betreuung und Weiterentwicklung der Datenintegrationsprozesse im EDM/PDM-Umfeld. Verantwortlich für die Transformation von Daten in ein zentrales SQL Server Data Warehouse und die Bereitstellung von BI-Reports.",
+    "tags": ["SSIS", "SSRS", "T-SQL", "ASP.NET WebForms", "Automotive"],
+    "from": "09/2017",
+    "to": "04/2021"
+  }
+]
