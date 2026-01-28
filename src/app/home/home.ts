@@ -12,6 +12,9 @@ import {TranslatePipe} from '@ngx-translate/core';
   templateUrl: './home.html',
   styleUrls: ['./home.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    'class': 'block scroll-mt-16 pt-16'
+  }
 })
 export class HomeComponent {
   protected readonly title = signal('Dominik Hirsch');

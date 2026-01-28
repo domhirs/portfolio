@@ -1,4 +1,17 @@
-<li class="flex items-center text-sm font-medium text-gray-300 bg-gray-700/50 rounded-full px-3 py-1">
+<li
+  class="flex items-center font-medium p-2 text-gray-300 bg-gray-700/50 rounded-full transition-all duration-200 hover:bg-gray-600/50"
+  [class.text-sm]="size() === 'small'"
+  [class.px-3]="size() === 'small'"
+  [class.py-1]="size() === 'small'"
+
+  [class.text-base]="size() === 'medium'"
+  [class.px-4]="size() === 'medium'"
+  [class.py-2]="size() === 'medium'"
+
+  [class.text-lg]="size() === 'large'"
+  [class.px-5]="size() === 'large'"
+  [class.py-2]="size() === 'large'"
+>
   <ng-content></ng-content>
   <span>{{ label() }}</span>
 </li>

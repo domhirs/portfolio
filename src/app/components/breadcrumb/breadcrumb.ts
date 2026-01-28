@@ -8,4 +8,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 })
 export class BreadcrumbComponent {
   label = input<string>();
+  size = input<'small' | 'medium' | 'large'>('small');
 }
