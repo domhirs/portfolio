@@ -22,5 +22,9 @@
   },
   "PROJECTS": {
     "TITLE": "Projects"
+  },
+  "HOME": {
+    "MORE_SKILLS": "more skills",
+    "MANY_MORE": "and more ..."
   }
 }
