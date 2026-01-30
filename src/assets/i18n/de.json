@@ -28,8 +28,9 @@
     "MANY_MORE": "...und viele mehr"
   },
   "SKILLS": {
-    "TITLE": "Skills & Paradigmen",
+    "TITLE": "Skills, Frameworks & Paradigmen",
     "MORE": "Weitere Skills",
-    "PARADIGMS": "Paradigmen"
+    "PARADIGMS": "Paradigmen",
+    "FRAMEWORKS": "Frameworks"
   }
 }
