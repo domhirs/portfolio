@@ -26,5 +26,10 @@
   "HOME": {
     "MORE_SKILLS": "Weitere Skills",
     "MANY_MORE": "...und viele mehr"
+  },
+  "SKILLS": {
+    "TITLE": "Skills & Paradigmen",
+    "MORE": "Weitere Skills",
+    "PARADIGMS": "Paradigmen"
   }
 }

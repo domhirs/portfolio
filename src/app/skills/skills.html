@@ -1,0 +1,43 @@
+<section id="skills" class="min-h-dvh w-full py-20 flex items-center justify-center">
+  <div class="container mx-auto px-4 w-full">
+    <h2 class="text-4xl text-center font-bold text-white mb-12">{{ 'SKILLS.TITLE' | translate }}</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- More Skills Column -->
+      <div class="flex flex-col items-center">
+        <app-list [title]="'SKILLS.MORE' | translate">
+          <app-breadcrumb [label]="'Java'" />
+          <app-breadcrumb [label]="'OfficeScript'" />
+          <app-breadcrumb [label]="'PowerQuery'" />
+          <app-breadcrumb [label]="'VBA'" />
+          <app-breadcrumb [label]="'Linux'" />
+          <app-breadcrumb [label]="'Proxmox'" />
+          <app-breadcrumb [label]="'nginx'" />
+          <app-breadcrumb [label]="'XML / XSD'" />
+          <app-breadcrumb [label]="'.NET Framework'" />
+          <app-breadcrumb [label]="'VSTO'" />
+          <app-breadcrumb [label]="'PrimeNG'" />
+          <app-breadcrumb [label]="'Capacitor'" />
+          <app-breadcrumb [label]="'Bootstrap'" />
+          <app-breadcrumb [label]="'DevExtreme'" />
+          <app-breadcrumb [label]="'mxGraph'" />
+          <app-breadcrumb [label]="'amCharts'" />
+          <app-breadcrumb [label]="'jQuery'" />
+        </app-list>
+      </div>
+
+      <!-- Paradigms Column -->
+      <div class="flex flex-col items-center">
+        <app-list [title]="'SKILLS.PARADIGMS' | translate">
+          <app-breadcrumb [label]="'Clean Code'" />
+          <app-breadcrumb [label]="'SOLID'" />
+          <app-breadcrumb [label]="'TDD'" />
+          <app-breadcrumb [label]="'DDD'" />
+          <app-breadcrumb [label]="'Microservices'" />
+          <app-breadcrumb [label]="'CI/CD'" />
+          <app-breadcrumb [label]="'Agile / Scrum'" />
+        </app-list>
+      </div>
+    </div>
+  </div>
+</section>

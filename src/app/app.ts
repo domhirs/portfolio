@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home';
 import { AboutComponent } from './about/about';
 import { ResumeComponent } from './resume/resume';
 import { ProjectsComponent } from './projects/projects';
+import { SkillsComponent } from './skills/skills';
 import { devIconProvider } from './icon.provider';
 import { NgIcon } from '@ng-icons/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
@@ -13,7 +14,7 @@ import { LanguageSelectorComponent } from './components/language-selector/langua
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent, NgIcon, TranslateModule, LanguageSelectorComponent],
+  imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent, SkillsComponent, NgIcon, TranslateModule, LanguageSelectorComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
   providers: [devIconProvider]

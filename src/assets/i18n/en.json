@@ -24,7 +24,12 @@
     "TITLE": "Projects"
   },
   "HOME": {
-    "MORE_SKILLS": "More skills",
+    "MORE_SKILLS": "More Skills",
     "MANY_MORE": "...and many more"
+  },
+  "SKILLS": {
+    "TITLE": "Skills & Paradigms",
+    "MORE": "Further Skills",
+    "PARADIGMS": "Paradigms"
   }
 }
