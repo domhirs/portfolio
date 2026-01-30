@@ -3,7 +3,7 @@
     <h2 class="text-4xl text-center font-bold text-white mb-12"> {{ 'PROJECTS.TITLE' | translate }}</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       @for (project of projects(); track project.id) {
-        <app-card [title]="project.title" [subtitle]="project.subtitle">
+        <app-card [title]="project.title" [subtitle]="project.subtitle" [meta]="project.from + ' - ' + project.to">
           <p class="text-gray-300 mb-4">{{ project.description }}</p>
           @if (project.tags && project.tags.length > 0) {
             <div class="flex flex-wrap gap-2">
