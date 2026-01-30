@@ -1,11 +1,19 @@
-<div class="bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-lg overflow-hidden transition-all duration-100 hover:bg-gray-800/60 hover:border-gray-600/50">
-  <div class="p-6">
-    @if (title()) {
-      <h3 class="text-xl font-bold text-white">{{ title() }}</h3>
-    }
-    @if (subtitle()) {
-      <h4 class="text-md font-semibold text-gray-400 mt-1">{{ subtitle() }}</h4>
-    }
+<div class="bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-lg overflow-hidden transition-all duration-300 hover:bg-gray-800/60 hover:border-gray-600/50 h-full flex flex-col">
+  <div class="p-6 flex-grow">
+    <div class="flex justify-between items-start mb-2">
+      <div class="flex-grow">
+        @if (title()) {
+          <h3 class="text-xl font-bold text-white leading-tight">{{ title() }}</h3>
+        }
+        @if (subtitle()) {
+          <h4 class="text-md font-semibold text-gray-400 mt-1">{{ subtitle() }}</h4>
+        }
+      </div>
+      @if (meta()) {
+        <span class="text-sm text-gray-400 whitespace-nowrap ml-4 bg-gray-700/30 px-2 py-1 rounded-md border border-gray-600/30">{{ meta() }}</span>
+      }
+    </div>
+
     <div class="mt-4">
       <ng-content></ng-content>
     </div>

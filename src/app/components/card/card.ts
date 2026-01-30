@@ -12,4 +12,5 @@ import { CommonModule } from '@angular/common';
 export class CardComponent {
   title = input<string>();
   subtitle = input<string>();
+  meta = input<string>();
 }
