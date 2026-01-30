@@ -39,8 +39,13 @@ export class App {
   private readonly document = inject(DOCUMENT);
 
   constructor() {
+    this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('de');
-    this.translate.use('de');
+
+    const browserLang = this.translate.getBrowserLang();
+    const langToUse = browserLang && browserLang.match(/en|de/) ? browserLang : 'en';
+
+    this.translate.use(langToUse);
 
     effect(() => {
       if (this.isMenuOpen()) {
