@@ -10,6 +10,8 @@ import { devIconProvider } from './icon.provider';
 import { NgIcon } from '@ng-icons/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LanguageSelectorComponent } from './components/language-selector/language-selector';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map, startWith } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +36,19 @@ export class App {
   readonly cvEnglishHref = signal('assets/files/Dominik_Hirsch_Full_Stack_Developer_CV_public_en.pdf');
 
   readonly translate = inject(TranslateService);
+
+  // Reactive signal for current language
+  readonly currentLang = toSignal(
+    this.translate.onLangChange.pipe(
+      map(event => event.lang),
+      startWith(this.translate.currentLang || this.translate.defaultLang)
+    )
+  );
+
+  // Computed CV link based on language
+  readonly currentCvHref = computed(() => {
+    return this.currentLang() === 'de' ? this.cvGermanHref() : this.cvEnglishHref();
+  });
 
   private readonly renderer = inject(Renderer2);
   private readonly document = inject(DOCUMENT);
