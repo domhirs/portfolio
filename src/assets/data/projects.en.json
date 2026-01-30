@@ -1,0 +1,146 @@
+[
+  {
+    "id": "16",
+    "title": "Migration of Travel Planning Application from Angular 16 to Angular 21",
+    "subtitle": "Frontend Development | Angular 16 & Angular 21",
+    "description": "Addressing technical debt, manual migration of the Angular application from Angular 16 to Angular 21 including used dependencies. Driven by breaking changes in PrimeNG (introduction of a new styling system) and long-term transition from PrimeFlex to TailwindCSS.",
+    "tags": ["Angular 21", "PrimeNG", "TailwindCSS", "Capacitor"],
+    "from": "12/2025",
+    "to": "01/2026"
+  },
+  {
+    "id": "15",
+    "title": "AI-supported multi-platform Travel Planning Application",
+    "subtitle": "Full-Stack Development | .NET Core & Angular 16",
+    "description": "Responsible for the full-stack further development of a mobile application. Core focus was on the conception and implementation of innovative AI features for travel planning using OpenAI LLMs. In addition, scalability was significantly improved through complete containerization of the three-layer architecture and the resolution of technical debt.",
+    "tags": [".NET Core", "Angular 16", "OpenAI LLM", "Docker", "Azure DevOps", "Entity Framework", "SQL Server"],
+    "from": "01/2025",
+    "to": "present"
+  },
+  {
+    "id": "14",
+    "title": "E2E Test Automation & Test Infrastructure",
+    "subtitle": "QA Engineering | Playwright & TypeScript",
+    "description": "Development and establishment of an international E2E test infrastructure in a SCRUM environment. This included the strategic planning of test cases, the technical implementation of automated tests with Playwright, and integration into CI/CD pipelines to ensure the highest software quality.",
+    "tags": ["TypeScript", "Playwright", "Azure DevOps", "CI/CD", "SCRUM", "Automotive"],
+    "from": "03/2022",
+    "to": "12/2024"
+  },
+  {
+    "id": "13",
+    "title": "Modernization & Support of Warehouse Control System",
+    "subtitle": "Database Development | VBA & SQL Server",
+    "description": "Long-term support and optimization of a critical warehouse control solution. Focus on stabilizing the system through targeted error analysis, bug fixes, and performance optimizations at the SQL Server interface.",
+    "tags": ["VBA", "MS SQL Server", "MS Access", "Business Logic"],
+    "from": "03/2022",
+    "to": "present"
+  },
+  {
+    "id": "12",
+    "title": "Further Development of PLM System (Aras Innovator)",
+    "subtitle": "Backend & Integration | C# & AML",
+    "description": "Collaboration in an agile team to expand a PLM platform in the industrial sector. Implementation of complex business logic in the backend as well as data structure adjustments using AML (Aras Markup Language) and C#.",
+    "tags": ["C#", ".NET Framework", "Aras Innovator", "AML", "SQL Server", "Docker"],
+    "from": "05/2022",
+    "to": "11/2022"
+  },
+  {
+    "id": "11",
+    "title": "Reporting Solutions for ALM Systems",
+    "subtitle": "PoC & Tooling | Java & Docker",
+    "description": "Successful execution of a Proof of Concept to extend Intland Codebeamer ALM. Development of individual Java-based reporting widgets within a containerized development environment.",
+    "tags": ["Java", "Docker", "MySQL", "Codebeamer ALM"],
+    "from": "01/2022",
+    "to": "03/2022"
+  },
+  {
+    "id": "10",
+    "title": "Interactive KPI Dashboard & Logic Editor",
+    "subtitle": "Frontend Architecture | Angular & TypeScript",
+    "description": "Conception and realization of a high-performance web frontend for visualizing key figures. Highlight was the development of a graphical drag-and-drop builder for intuitive modeling of complex logic workflows.",
+    "tags": ["Angular", "TypeScript", "mxGraph", "DevExtreme", "Bootstrap", "REST API"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "9",
+    "title": "Scalable REST API & Data Transformation",
+    "subtitle": "Backend Architecture | .NET Core & ASP.NET WebAPI",
+    "description": "Design and implementation of a central interface architecture for processing complex data imports. Including migration of the existing application to .NET Core 3.1 as well as implementation of a role-based access concept.",
+    "tags": ["C#", ".NET Core", "ASP.NET WebAPI", "Dapper", "T-SQL", "Unit Testing"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "8",
+    "title": "ETL Database Modeling & Performance",
+    "subtitle": "Database Engineering | MS SQL Server",
+    "description": "Design and implementation of a highly flexible, historized database architecture. Optimization of ETL processes for efficient processing of non-specific data volumes including maintenance and migration strategies.",
+    "tags": ["MS SQL", "T-SQL", "Database Design", "ETL", "XML/XSD"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "7",
+    "title": "Automation via Windows Services",
+    "subtitle": "Backend Automation | C# & Multithreading",
+    "description": "Development of a robust Windows service for automating parallel data imports. Increasing throughput by using the Task Parallel Library (TPL) and intelligent load balancing.",
+    "tags": ["C#", ".NET Framework", "Multithreading", "TPL", "SQL Server"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "6",
+    "title": "Enterprise Excel Add-ins for Data Transfer",
+    "subtitle": "Office Integration | C# & VSTO",
+    "description": "Development of professional Excel VSTO add-ins for process optimization. Automated extraction and validation of technical data into XML structures for seamless integration into downstream systems.",
+    "tags": ["C#", "VSTO", "WinForms", "XML", ".NET Framework"],
+    "from": "09/2018",
+    "to": "01/2022"
+  },
+  {
+    "id": "5",
+    "title": "Security-critical License Management",
+    "subtitle": "Application Security | C# & RSA",
+    "description": "Development of a desktop application for managing RSA-encrypted software licenses. Focus on data security and user guidance within the licensing processes.",
+    "tags": ["C#", "WinForms", "RSA Encryption", "Dapper", "SQL Server"],
+    "from": "04/2020",
+    "to": "05/2020"
+  },
+  {
+    "id": "4",
+    "title": "Prototyping for Data Management Systems",
+    "subtitle": "Web Development | ASP.NET MVC",
+    "description": "Creation of a feasibility study and implementation of a web-based prototype for dynamic data management. Use of modern web technologies to demonstrate flexible data structures.",
+    "tags": ["ASP.NET MVC", "jQuery", "C#", "Entity Framework"],
+    "from": "04/2018",
+    "to": "09/2018"
+  },
+  {
+    "id": "3",
+    "title": "Digitization of PLM Workflows",
+    "subtitle": "Process Optimization | C# & VSTO",
+    "description": "Analysis and digital transformation of manual workflows in the engineering environment. Development of automation solutions for migrating historized data sets into PLM systems.",
+    "tags": ["C#", "VSTO", "WinForms", "Process Analysis"],
+    "from": "03/2018",
+    "to": "01/2020"
+  },
+  {
+    "id": "2",
+    "title": "Web-based Time Tracking & HR Workflows",
+    "subtitle": "Web Application | ASP.NET WebForms",
+    "description": "Long-term modernization of an enterprise application for time management. Implementation of complex approval workflows (vacation requests) and creation of automated reports using SSRS.",
+    "tags": ["C#", "ASP.NET WebForms", "SSRS", "SQL Server", "JavaScript"],
+    "from": "09/2017",
+    "to": "2020"
+  },
+  {
+    "id": "1",
+    "title": "ETL Infrastructure & DWH Management",
+    "subtitle": "Business Intelligence | SSIS & SSRS",
+    "description": "Support and further development of data integration processes in the EDM/PDM environment. Responsible for transforming data into a central SQL Server Data Warehouse and providing BI reports.",
+    "tags": ["SSIS", "SSRS", "T-SQL", "ASP.NET WebForms", "Automotive"],
+    "from": "09/2017",
+    "to": "04/2021"
+  }
+]
