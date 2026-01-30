@@ -1,6 +1,6 @@
 {
   "NAV": {
-    "HOME": "Startseite",
+    "HOME": "Main Stack",
     "ABOUT": "Über mich",
     "RESUME": "Lebenslauf",
     "PROJECTS": "Projekte",
@@ -22,5 +22,15 @@
   },
   "PROJECTS": {
     "TITLE": "Projekte"
+  },
+  "HOME": {
+    "MORE_SKILLS": "Weitere Skills",
+    "MANY_MORE": "...und viele mehr"
+  },
+  "SKILLS": {
+    "TITLE": "Skills, Frameworks & Paradigmen",
+    "MORE": "Weitere Skills",
+    "PARADIGMS": "Paradigmen",
+    "FRAMEWORKS": "Frameworks"
   }
 }

@@ -1,6 +1,6 @@
 {
   "NAV": {
-    "HOME": "Home",
+    "HOME": "main stack",
     "ABOUT": "About",
     "RESUME": "Resume",
     "PROJECTS": "Projects",
@@ -22,5 +22,15 @@
   },
   "PROJECTS": {
     "TITLE": "Projects"
+  },
+  "HOME": {
+    "MORE_SKILLS": "More Skills",
+    "MANY_MORE": "...and many more"
+  },
+  "SKILLS": {
+    "TITLE": "Skills, frameworks & paradigms",
+    "MORE": "Further Skills",
+    "PARADIGMS": "Paradigms",
+    "FRAMEWORKS": "frameworks"
   }
 }
