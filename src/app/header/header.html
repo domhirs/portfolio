@@ -57,7 +57,7 @@
     <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
 
     <!-- Language Switcher (Disabled) -->
-    <app-language-selector [currentLang]="translate.currentLang" [disabled]="true" (languageChange)="switchLanguage($event)"></app-language-selector>
+    <app-language-selector [currentLang]="translate.currentLang" [disabled]="false" (languageChange)="switchLanguage($event)"></app-language-selector>
   </div>
 
   <!-- Right Side: Burger Menu Button (Mobile only) -->
