@@ -1,21 +1,21 @@
 [
   {
     "id": "16",
-    "title": "Migration von Angular 16 nach Angular 21",
+    "title": "Migration der Reiseplanungs-Anwendung von Angular 16 nach Angular 21",
     "subtitle": "Frontend Development | Angular 16 & Angular 21",
     "description": "Aufarbeitung technischer Schulden, manuelle Migration der Angular Anwendung von Angular 16 nach Angular 21 inklusive eingesetzter Abhängigkeiten. Bedingt durch breaking Changes in PrimeNG - (Einführung eines neuen Stylingsystems) und langfristige Umstellung von PrimeFlex auf TailwindCSS.",
     "tags": ["Angular 21", "PrimeNG", "TailwindCSS", "Capacitor"],
     "from": "12/2025",
-    "to": "heute"
+    "to": "01/2026"
   },
   {
     "id": "15",
-    "title": "KI-gestützte Multiplattform-Reiseapplikation",
+    "title": "KI-gestützte multiplattform Reiseplanungs-Anwendung",
     "subtitle": "Full-Stack Development | .NET Core & Angular 16",
     "description": "Verantwortlich für die Full-Stack-Weiterentwicklung einer mobilen Anwendung. Kernfokus lag auf der Konzeption und Implementierung innovativer KI-Features zur Reiseplanung mittels OpenAI LLMs. Zudem wurde die Skalierbarkeit durch eine vollständige Containerisierung der Three-Layer-Architektur und die Auflösung technischer Schulden signifikant verbessert.",
     "tags": [".NET Core", "Angular 16", "OpenAI LLM", "Docker", "Azure DevOps", "Entity Framework", "SQL Server"],
     "from": "01/2025",
-    "to": "12/2025"
+    "to": "heute"
   },
   {
     "id": "14",
