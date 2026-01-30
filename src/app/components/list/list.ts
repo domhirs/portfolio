@@ -5,6 +5,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   templateUrl: './list.html',
   styleUrls: ['./list.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true
 })
 export class ListComponent {
   title = input<string>();
