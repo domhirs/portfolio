@@ -5,7 +5,7 @@ import {
   diConfluenceOriginal,
   diCsharpOriginal,
   diCss3Original, diDatadogOriginal, diDockerOriginal, diDotnetcoreOriginal, diEntityframeworkcoreOriginal,
-  diEslintOriginal, diGitOriginal, diHtml5Original, diJavaOriginal, diLinuxOriginal,
+  diEslintOriginal, diGitOriginal, diGithubOriginal, diHtml5Original, diJavaOriginal, diLinuxOriginal,
   diMicrosoftsqlserverOriginal,
   diNodejsOriginal, diPlaywrightOriginal, diPowershellOriginal, diPrimengOriginal, diProxmoxOriginalWordmark,
   diTailwindcssOriginal,
@@ -14,6 +14,7 @@ import {
 import { matDownloadOutline } from '@ng-icons/material-icons/outline';
 import {EnvironmentProviders, Provider} from '@angular/core';
 import {diJestPlain} from '@ng-icons/devicon/plain';
+import { bootstrapGithub } from '@ng-icons/bootstrap-icons';
 
 export const devIconProvider: (Provider | EnvironmentProviders)[] = [
   provideIcons({
@@ -34,6 +35,7 @@ export const devIconProvider: (Provider | EnvironmentProviders)[] = [
     diCss3Original,
     diEslintOriginal,
     diGitOriginal,
+    diGithubOriginal,
     diHtml5Original,
     diLinuxOriginal,
     diJavaOriginal,
@@ -41,6 +43,7 @@ export const devIconProvider: (Provider | EnvironmentProviders)[] = [
     diPrimengOriginal,
     diPowershellOriginal,
     matDownloadOutline,
-    diJestPlain
+    diJestPlain,
+    bootstrapGithub
   }),
 ];
