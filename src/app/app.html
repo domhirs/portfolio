@@ -27,10 +27,15 @@
             <ng-icon name="matDownloadOutline"></ng-icon>
           </a>
 
-          <!-- Mobile Language Switcher (Disabled) -->
+          <!-- Mobile Language Switcher -->
           <div class="mt-4">
             <app-language-selector [currentLang]="translate.currentLang" [disabled]="false" (languageChange)="switchLanguage($event)"></app-language-selector>
           </div>
+        </li>
+        <li class="mt-4">
+          <a href="https://github.com/domhirs" target="_blank" class="text-gray-600/50 hover:text-gray-300 transition-colors flex items-center justify-center">
+            <ng-icon name="bootstrapGithub" class="text-4xl"></ng-icon>
+          </a>
         </li>
       </ul>
     </nav>
