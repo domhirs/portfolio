@@ -3,11 +3,12 @@ import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from '../components/button/button';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LanguageSelectorComponent } from '../components/language-selector/language-selector';
+import {NgIcon} from '@ng-icons/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage, ButtonComponent, TranslateModule, LanguageSelectorComponent],
+  imports: [NgOptimizedImage, ButtonComponent, TranslateModule, LanguageSelectorComponent, NgIcon],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   host: {

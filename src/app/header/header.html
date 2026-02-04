@@ -51,13 +51,14 @@
     </ul>
   </nav>
 
-  <!-- Right Side: Desktop Contact & CV Buttons (Absolutely positioned) -->
+  <!-- Right Side: Desktop Buttons (Absolutely positioned) -->
   <div class="absolute right-8 hidden md:flex items-center gap-2">
     <app-button [href]="contactLink()" [label]="'NAV.CONTACT' | translate" [variant]="'inverted'"></app-button>
     <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
-
-    <!-- Language Switcher (Disabled) -->
-    <app-language-selector [currentLang]="translate.currentLang" [disabled]="false" (languageChange)="switchLanguage($event)"></app-language-selector>
+    <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
+    <a href="https://github.com/domhirs" target="_blank" class="text-gray-600/50 hover:text-gray-300 transition-colors mt-1.5">
+      <ng-icon name="bootstrapGithub" class="text-4xl"></ng-icon>
+    </a>
   </div>
 
   <!-- Right Side: Burger Menu Button (Mobile only) -->
