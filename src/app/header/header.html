@@ -1,71 +1,83 @@
-<!-- Main Header Container -->
-<div class="relative flex items-center justify-between md:justify-center px-4 sm:px-8 h-full">
+<div class="flex flex-col">
+  <!-- Row 1: Main header row (always visible) -->
+  <div class="relative flex items-center justify-between md:justify-center px-4 sm:px-8 h-24">
 
-  <!-- Left Side: Desktop User Info (Absolutely positioned) -->
-  <div
-    class="absolute left-8 hidden md:flex items-center space-x-4 transition-opacity duration-300 ease-in-out"
-    [class.opacity-0]="!isScrolled()"
-    [class.opacity-100]="isScrolled()"
-  >
-    <img
-      ngSrc="assets/picture-avatar.png"
-      alt="Profile Picture"
-      class="w-12 h-12 rounded-full object-cover"
-      width="48"
-      height="48"
-    />
-    <h1 class="text-xl font-bold text-white">{{ title() }}</h1>
+    <!-- Left Side: Desktop User Info (Absolutely positioned) -->
+    <div
+      class="absolute left-8 hidden md:flex items-center space-x-4 transition-opacity duration-300 ease-in-out"
+      [class.opacity-0]="!isScrolled()"
+      [class.opacity-100]="isScrolled()"
+    >
+      <img
+        ngSrc="assets/picture-avatar.png"
+        alt="Profile Picture"
+        class="w-12 h-12 rounded-full object-cover"
+        width="48"
+        height="48"
+      />
+      <h1 class="text-xl font-bold text-white">{{ title() }}</h1>
+    </div>
+
+    <!-- Left Side: Mobile User Info (Visible on mobile, fades in on scroll) -->
+    <div
+      class="flex md:hidden items-center space-x-4 transition-opacity duration-300 ease-in-out"
+      [class.opacity-0]="!isScrolled()"
+      [class.opacity-100]="isScrolled()"
+    >
+      <img
+        ngSrc="assets/picture-avatar.png"
+        alt="Profile Picture"
+        class="w-12 h-12 rounded-full object-cover"
+        width="48"
+        height="48"
+      />
+    </div>
+
+    <!-- Center: Title (Mobile only, fades in on scroll) -->
+    <div
+      class="flex md:hidden items-center transition-opacity duration-300 ease-in-out"
+      [class.opacity-0]="!isScrolled()"
+      [class.opacity-100]="isScrolled()"
+    >
+      <h1 class="text-xl font-bold text-white">{{ title() }}</h1>
+    </div>
+
+    <!-- Center: Desktop Navigation -->
+    <nav class="hidden md:flex">
+      <ul class="flex list-none p-0">
+        <li class="mx-2"><app-button [href]="'#home'" [label]="'NAV.HOME' | translate"></app-button></li>
+        <li class="mx-2"><app-button [href]="'#about'" [label]="'NAV.ABOUT' | translate"></app-button></li>
+        <li class="mx-2"><app-button [href]="'#resume'" [label]="'NAV.RESUME' | translate"></app-button></li>
+        <li class="mx-2"><app-button [href]="'#projects'" [label]="'NAV.PROJECTS' | translate"></app-button></li>
+      </ul>
+    </nav>
+
+    <!-- Right Side: Desktop Buttons (only at xl+, absolutely positioned) -->
+    <div class="absolute right-8 hidden xl:flex items-center gap-2">
+      <app-button [href]="contactLink()" [label]="'NAV.CONTACT' | translate" [variant]="'inverted'"></app-button>
+      <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
+      <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
+      <a href="https://github.com/domhirs" target="_blank" class="text-gray-600/50 hover:text-gray-300 transition-colors mt-1.5">
+        <ng-icon name="bootstrapGithub" class="text-4xl"></ng-icon>
+      </a>
+    </div>
+
+    <!-- Right Side: Burger Menu Button (Mobile only) -->
+    <div class="flex md:hidden items-center">
+      <button (click)="menuToggled.emit()" class="text-white p-2">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
   </div>
 
-  <!-- Left Side: Mobile User Info (Visible on mobile, fades in on scroll) -->
-  <div
-    class="flex md:hidden items-center space-x-4 transition-opacity duration-300 ease-in-out"
-    [class.opacity-0]="!isScrolled()"
-    [class.opacity-100]="isScrolled()"
-  >
-    <img
-      ngSrc="assets/picture-avatar.png"
-      alt="Profile Picture"
-      class="w-12 h-12 rounded-full object-cover"
-      width="48"
-      height="48"
-    />
-  </div>
-
-  <!-- Center: Title (Mobile only, fades in on scroll) -->
-  <div
-    class="flex md:hidden items-center transition-opacity duration-300 ease-in-out"
-    [class.opacity-0]="!isScrolled()"
-    [class.opacity-100]="isScrolled()"
-  >
-    <h1 class="text-xl font-bold text-white">{{ title() }}</h1>
-  </div>
-
-  <!-- Center: Desktop Navigation -->
-  <nav class="hidden md:flex">
-    <ul class="flex list-none p-0">
-      <li class="mx-2"><app-button [href]="'#home'" [label]="'NAV.HOME' | translate"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#about'" [label]="'NAV.ABOUT' | translate"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#resume'" [label]="'NAV.RESUME' | translate"></app-button></li>
-      <li class="mx-2"><app-button [href]="'#projects'" [label]="'NAV.PROJECTS' | translate"></app-button></li>
-    </ul>
-  </nav>
-
-  <!-- Right Side: Desktop Buttons (Absolutely positioned) -->
-  <div class="absolute right-8 hidden md:flex items-center gap-2">
+  <!-- Row 2: Action buttons (md to xl only, wraps below nav when viewport is too narrow) -->
+  <div class="hidden md:flex xl:hidden justify-center items-center gap-2 -mt-3 pb-8 scale-[0.7]">
     <app-button [href]="contactLink()" [label]="'NAV.CONTACT' | translate" [variant]="'inverted'"></app-button>
     <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
     <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
-    <a href="https://github.com/domhirs" target="_blank" class="text-gray-600/50 hover:text-gray-300 transition-colors mt-1.5">
+    <a href="https://github.com/domhirs" target="_blank" class="text-gray-600/50 hover:text-gray-300 transition-colors">
       <ng-icon name="bootstrapGithub" class="text-4xl"></ng-icon>
     </a>
-  </div>
-
-  <!-- Right Side: Burger Menu Button (Mobile only) -->
-  <div class="flex md:hidden items-center">
-    <button (click)="menuToggled.emit()" class="text-white p-2">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-    </button>
   </div>
 </div>
 
