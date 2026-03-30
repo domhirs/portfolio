@@ -1,7 +1,23 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #58CCED;
+  --color-primary-100: #55C2F1;
+  --color-primary-200: #51B8F9;
+  --color-primary-300: #49A7F6;
+  --color-primary-400: #3E93DD;
+  --color-primary-500: #337FC4;
+  --color-primary-600: #286BAB;
+  --color-primary-700: #1D5791;
+  --color-primary-800: #124378;
+  --color-primary-900: #072F5F;
+}
+
 html {
-  @apply bg-sky-200 dark:bg-sky-950 dark:text-shadow-sky-100;
+  scroll-behavior: smooth;
+  @apply bg-white dark:bg-primary-900;
 }
 
 body {
