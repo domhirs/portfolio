@@ -33,7 +33,6 @@
               "src/CNAME"
             ],
             "styles": [
-              "src/tailwind.css",
               "src/styles.css"
             ],
             "polyfills": [
