@@ -14,7 +14,7 @@ import {
 import { matDownloadOutline } from '@ng-icons/material-icons/outline';
 import {EnvironmentProviders, Provider} from '@angular/core';
 import {diJestPlain} from '@ng-icons/devicon/plain';
-import { bootstrapGithub } from '@ng-icons/bootstrap-icons';
+import { bootstrapGithub, bootstrapSunFill, bootstrapMoonFill } from '@ng-icons/bootstrap-icons';
 
 export const devIconProvider: (Provider | EnvironmentProviders)[] = [
   provideIcons({
@@ -44,6 +44,8 @@ export const devIconProvider: (Provider | EnvironmentProviders)[] = [
     diPowershellOriginal,
     matDownloadOutline,
     diJestPlain,
-    bootstrapGithub
+    bootstrapGithub,
+    bootstrapSunFill,
+    bootstrapMoonFill
   }),
 ];
