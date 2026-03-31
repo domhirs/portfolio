@@ -1,5 +1,5 @@
 <div
-  class="flex items-center bg-gray-100 dark:bg-gray-700/50 rounded-full p-1 border border-gray-200 dark:border-gray-600/50 transition-opacity"
+  class="flex items-center bg-gray-100 dark:bg-surface-high rounded-full p-1 border border-gray-200 dark:border-muted/20 transition-opacity"
   [class.opacity-50]="disabled()"
   [class.cursor-not-allowed]="disabled()"
 >
@@ -10,7 +10,7 @@
     [class.bg-white]="currentLang() === 'de'"
     [class.text-gray-900]="currentLang() === 'de'"
     [class.text-gray-500]="currentLang() !== 'de'"
-    [class.dark:text-gray-400]="currentLang() !== 'de'"
+    [class.dark:text-on-surface-variant]="currentLang() !== 'de'"
     [class.hover:text-gray-900]="currentLang() !== 'de' && !disabled()"
     [class.dark:hover:text-white]="currentLang() !== 'de' && !disabled()"
   >
