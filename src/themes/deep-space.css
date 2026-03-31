@@ -1,0 +1,16 @@
+/* Deep Space — dark theme */
+[data-theme="deep-space"] {
+  --theme-surface:            #060e20;
+  --theme-surface-low:        #06122c;
+  --theme-surface-card:       #0a1836;
+  --theme-surface-high:       #0f1e3f;
+  --theme-surface-bright:     #182b52;
+  --theme-accent:             #c0c1ff;
+  --theme-accent-dim:         #6063ee;
+  --theme-accent-fixed:       #7073ff;
+  --theme-accent-container:   #3c3dca;
+  --theme-tertiary:           #47c4ff;
+  --theme-on-surface:         #ffffff;
+  --theme-on-surface-variant: #99aad9;
+  --theme-muted:              #364770;
+}

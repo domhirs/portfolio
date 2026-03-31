@@ -1,9 +1,25 @@
 @import "tailwindcss";
+@import "./themes/deep-space.css";
 
 @variant dark (&:where(.dark, .dark *));
 
-@theme {
-  --color-primary-50: #58CCED;
+@theme inline {
+  --color-surface:            var(--theme-surface);
+  --color-surface-low:        var(--theme-surface-low);
+  --color-surface-card:       var(--theme-surface-card);
+  --color-surface-high:       var(--theme-surface-high);
+  --color-surface-bright:     var(--theme-surface-bright);
+  --color-accent:             var(--theme-accent);
+  --color-accent-dim:         var(--theme-accent-dim);
+  --color-accent-fixed:       var(--theme-accent-fixed);
+  --color-accent-container:   var(--theme-accent-container);
+  --color-tertiary:           var(--theme-tertiary);
+  --color-on-surface:         var(--theme-on-surface);
+  --color-on-surface-variant: var(--theme-on-surface-variant);
+  --color-muted:              var(--theme-muted);
+
+  /* Keep existing primary palette */
+  --color-primary-50:  #58CCED;
   --color-primary-100: #55C2F1;
   --color-primary-200: #51B8F9;
   --color-primary-300: #49A7F6;
@@ -17,7 +33,7 @@
 
 html {
   scroll-behavior: smooth;
-  @apply bg-white dark:bg-primary-900;
+  @apply bg-white dark:bg-surface;
 }
 
 body {
