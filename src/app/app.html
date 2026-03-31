@@ -27,9 +27,16 @@
             <ng-icon name="matDownloadOutline"></ng-icon>
           </a>
 
-          <!-- Mobile Language Switcher -->
-          <div class="mt-4">
+          <!-- Mobile Language Switcher + Theme Toggle -->
+          <div class="mt-4 flex items-center gap-3">
             <app-language-selector [currentLang]="translate.currentLang" [disabled]="false" (languageChange)="switchLanguage($event)"></app-language-selector>
+            <button (click)="theme.toggle()" class="text-accent hover:text-on-surface transition-colors" [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+              @if (theme.isDark()) {
+                <ng-icon name="bootstrapSunFill" class="text-3xl"></ng-icon>
+              } @else {
+                <ng-icon name="bootstrapMoonFill" class="text-3xl"></ng-icon>
+              }
+            </button>
           </div>
         </li>
         <li class="mt-4">

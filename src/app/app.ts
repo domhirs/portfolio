@@ -12,6 +12,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LanguageSelectorComponent } from './components/language-selector/language-selector';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, startWith } from 'rxjs';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -36,6 +37,7 @@ export class App {
   readonly cvEnglishHref = signal('assets/files/Dominik_Hirsch_Full_Stack_Developer_CV_public_en.pdf');
 
   readonly translate = inject(TranslateService);
+  readonly theme = inject(ThemeService);
 
   // Reactive signal for current language
   readonly currentLang = toSignal(
