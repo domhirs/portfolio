@@ -2,8 +2,6 @@
 @import "./themes/deep-space.css";
 @import "./themes/ocean-breeze.css";
 
-@variant dark (&:where(.dark, .dark *));
-
 @theme inline {
   --color-surface:            var(--theme-surface);
   --color-surface-low:        var(--theme-surface-low);

@@ -1,18 +1,25 @@
 <!doctype html>
-<html lang="en" data-theme="deep-space">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Dominik Hirsch | Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!--
+    Inline script to apply the theme before Angular bootstraps, preventing a flash of the
+    wrong theme (FOUC). Default is the OS colour-scheme preference; once the user actively
+    toggles the theme, the choice is persisted in localStorage and takes priority on
+    subsequent visits.
+  -->
   <script>
     (function () {
       var stored = localStorage.getItem('theme');
       var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (stored === 'dark' || (!stored && prefersDark)) {
-        document.documentElement.classList.add('dark');
-      }
+      var theme = (stored === 'deep-space' || stored === 'ocean-breeze')
+        ? stored
+        : (prefersDark ? 'deep-space' : 'ocean-breeze');
+      document.documentElement.dataset.theme = theme;
     })();
   </script>
 </head>
