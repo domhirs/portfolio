@@ -1,0 +1,25 @@
+/* Ocean Breeze — light theme (inverted from Deep Space) */
+[data-theme="ocean-breeze"] {
+  /* Surfaces: deep-space darks → light blues */
+  --theme-surface:            #f8faff;  /* was #060e20 */
+  --theme-surface-low:        #eef2fc;  /* was #06122c */
+  --theme-surface-card:       #ffffff;  /* was #0a1836 */
+  --theme-surface-high:       #e4ecf8;  /* was #0f1e3f */
+  --theme-surface-bright:     #d0dff5;  /* was #182b52 */
+
+  /* Accent: inverted — dark navy used as accent on light bg */
+  --theme-accent:             #3c3dca;  /* was #c0c1ff (now the deep value) */
+  --theme-accent-dim:         #6063ee;  /* unchanged — midpoint stays */
+  --theme-accent-fixed:       #5558ee;  /* was #7073ff */
+  --theme-accent-container:   #c0c1ff;  /* was #3c3dca (light lavender as chip bg) */
+
+  /* Tertiary: darker cyan for readability on light */
+  --theme-tertiary:           #0078b4;  /* was #47c4ff */
+
+  /* Text: swapped — dark text on light bg */
+  --theme-on-surface:         #060e20;  /* was #ffffff */
+  --theme-on-surface-variant: #364770;  /* was #99aad9 → now readable dark */
+
+  /* Borders: soft on light bg */
+  --theme-muted:              #99aad9;  /* was #364770 → now lighter stroke */
+}

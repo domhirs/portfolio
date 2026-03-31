@@ -1,4 +1,4 @@
-<div class="flex flex-col dark:bg-surface-bright/80 dark:backdrop-blur-sm">
+<div class="flex flex-col bg-surface-bright/80 backdrop-blur-sm">
   <!-- Row 1: Main header row (always visible) -->
   <div class="relative flex items-center justify-between md:justify-center px-4 sm:px-8 h-24">
 
@@ -15,7 +15,7 @@
         width="48"
         height="48"
       />
-      <h1 class="text-xl font-bold text-gray-900 dark:text-white">{{ title() }}</h1>
+      <h1 class="text-xl font-bold text-on-surface">{{ title() }}</h1>
     </div>
 
     <!-- Left Side: Mobile User Info (Visible on mobile, fades in on scroll) -->
@@ -39,7 +39,7 @@
       [class.opacity-0]="!isScrolled()"
       [class.opacity-100]="isScrolled()"
     >
-      <h1 class="text-xl font-bold text-gray-900 dark:text-white">{{ title() }}</h1>
+      <h1 class="text-xl font-bold text-on-surface">{{ title() }}</h1>
     </div>
 
     <!-- Center: Desktop Navigation -->
@@ -57,21 +57,21 @@
       <app-button [href]="contactLink()" [label]="'NAV.CONTACT' | translate" [variant]="'inverted'"></app-button>
       <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
       <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
-      <button (click)="theme.toggle()" class="text-gray-400 hover:text-gray-700 dark:text-accent dark:hover:text-white transition-colors mt-1.5" [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+      <button (click)="theme.toggle()" class="text-accent hover:text-on-surface transition-colors mt-1.5" [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
         @if (theme.isDark()) {
           <ng-icon name="bootstrapSunFill" class="text-3xl"></ng-icon>
         } @else {
           <ng-icon name="bootstrapMoonFill" class="text-3xl"></ng-icon>
         }
       </button>
-      <a href="https://github.com/domhirs" target="_blank" class="text-gray-400 hover:text-gray-700 dark:text-muted dark:hover:text-ds-on-surface-variant transition-colors mt-1.5">
+      <a href="https://github.com/domhirs" target="_blank" class="text-muted hover:text-on-surface-variant transition-colors mt-1.5">
         <ng-icon name="bootstrapGithub" class="text-4xl"></ng-icon>
       </a>
     </div>
 
     <!-- Right Side: Burger Menu Button (Mobile only) -->
     <div class="flex md:hidden items-center">
-      <button (click)="menuToggled.emit()" class="text-gray-700 dark:text-white p-2">
+      <button (click)="menuToggled.emit()" class="text-on-surface p-2">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
       </button>
     </div>
@@ -82,14 +82,14 @@
     <app-button [href]="contactLink()" [label]="'NAV.CONTACT' | translate" [variant]="'inverted'"></app-button>
     <app-button [href]="cvLink()" [label]="'NAV.CV' | translate" [variant]="'inverted'" [icon]="'matDownloadOutline'" [target]="'_blank'"></app-button>
     <app-language-selector [currentLang]="translate.currentLang" (languageChange)="switchLanguage($event)"></app-language-selector>
-    <button (click)="theme.toggle()" class="text-gray-400 hover:text-gray-700 dark:text-accent dark:hover:text-white transition-colors" [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+    <button (click)="theme.toggle()" class="text-accent hover:text-on-surface transition-colors" [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
       @if (theme.isDark()) {
         <ng-icon name="bootstrapSunFill" class="text-3xl"></ng-icon>
       } @else {
         <ng-icon name="bootstrapMoonFill" class="text-3xl"></ng-icon>
       }
     </button>
-    <a href="https://github.com/domhirs" target="_blank" class="text-gray-400 hover:text-gray-700 dark:text-muted dark:hover:text-ds-on-surface-variant transition-colors">
+    <a href="https://github.com/domhirs" target="_blank" class="text-muted hover:text-on-surface-variant transition-colors">
       <ng-icon name="bootstrapGithub" class="text-4xl"></ng-icon>
     </a>
   </div>

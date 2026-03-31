@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./themes/deep-space.css";
+@import "./themes/ocean-breeze.css";
 
 @variant dark (&:where(.dark, .dark *));
 
@@ -33,7 +34,7 @@
 
 html {
   scroll-behavior: smooth;
-  @apply bg-white dark:bg-surface;
+  @apply bg-surface;
 }
 
 body {

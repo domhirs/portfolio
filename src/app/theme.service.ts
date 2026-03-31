@@ -1,7 +1,7 @@
 import { Injectable, signal, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-export type AppTheme = 'deep-space';
+export type AppTheme = 'deep-space' | 'ocean-breeze';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
