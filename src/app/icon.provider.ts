@@ -4,11 +4,13 @@ import {
   diAzuredevopsOriginal,
   diConfluenceOriginal,
   diCsharpOriginal,
-  diCss3Original, diDatadogOriginal, diDockerOriginal, diDotnetcoreOriginal, diEntityframeworkcoreOriginal,
-  diEslintOriginal, diGitOriginal, diGithubOriginal, diHtml5Original, diJavaOriginal, diLinuxOriginal,
+  diCss3Original, diDatadogOriginal, diDebianOriginal, diDockerOriginal, diDotnetcoreOriginal, diEntityframeworkcoreOriginal,
+  diEslintOriginal, diGitOriginal, diGithubOriginal, diGrafanaOriginal, diHtml5Original, diJavaOriginal, diLinuxOriginal,
   diMicrosoftsqlserverOriginal,
-  diNodejsOriginal, diPlaywrightOriginal, diPowershellOriginal, diPrimengOriginal, diProxmoxOriginalWordmark,
+  diNginxOriginal,
+  diNodejsOriginal, diPlaywrightOriginal, diPowershellOriginal, diPrimengOriginal, diPrometheusOriginal, diProxmoxOriginalWordmark,
   diTailwindcssOriginal,
+  diTraefikproxyOriginal,
   diTypescriptOriginal, diVitestOriginal
 } from '@ng-icons/devicon/original';
 import { matDownloadOutline } from '@ng-icons/material-icons/outline';
@@ -42,6 +44,11 @@ export const devIconProvider: (Provider | EnvironmentProviders)[] = [
     diProxmoxOriginalWordmark,
     diPrimengOriginal,
     diPowershellOriginal,
+    diNginxOriginal,
+    diTraefikproxyOriginal,
+    diDebianOriginal,
+    diGrafanaOriginal,
+    diPrometheusOriginal,
     matDownloadOutline,
     diJestPlain,
     bootstrapGithub,
