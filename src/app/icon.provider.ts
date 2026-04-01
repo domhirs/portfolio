@@ -8,7 +8,8 @@ import {
   diEslintOriginal, diGitOriginal, diGithubOriginal, diGrafanaOriginal, diHtml5Original, diJavaOriginal, diLinuxOriginal,
   diMicrosoftsqlserverOriginal,
   diNginxOriginal,
-  diNodejsOriginal, diPlaywrightOriginal, diPowershellOriginal, diPrimengOriginal, diPrometheusOriginal, diProxmoxOriginalWordmark,
+  diNodejsOriginal, 
+  diPlaywrightOriginal, diPowershellOriginal, diPrimengOriginal, diPrometheusOriginal, diProxmoxOriginalWordmark,
   diTailwindcssOriginal,
   diTraefikproxyOriginal,
   diTypescriptOriginal, diVitestOriginal
@@ -17,8 +18,9 @@ import { matDownloadOutline } from '@ng-icons/material-icons/outline';
 import {EnvironmentProviders, Provider} from '@angular/core';
 import {diJestPlain} from '@ng-icons/devicon/plain';
 import { bootstrapGithub, bootstrapSunFill, bootstrapMoonFill } from '@ng-icons/bootstrap-icons';
+import { customCrowdsecOriginal } from './icons/custom-icons';
 
-export const devIconProvider: (Provider | EnvironmentProviders)[] = [
+export const appIconProvider: (Provider | EnvironmentProviders)[] = [
   provideIcons({
     diAngularOriginal,
     diTypescriptOriginal,
@@ -53,6 +55,7 @@ export const devIconProvider: (Provider | EnvironmentProviders)[] = [
     diJestPlain,
     bootstrapGithub,
     bootstrapSunFill,
-    bootstrapMoonFill
+    bootstrapMoonFill,
+    customCrowdsecOriginal
   }),
 ];
