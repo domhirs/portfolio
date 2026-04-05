@@ -3,10 +3,9 @@
   margin-bottom: 4rem;
 }
 
+// Mobile: plain heading, no grid offset
 .title-row {
-  display: grid;
-  grid-template-columns: 8rem 2.5rem 1fr;
-  column-gap: 0.75rem;
+  display: block;
   margin-bottom: 0.75rem;
 }
 
@@ -15,4 +14,13 @@
   font-weight: 700;
   color: var(--theme-on-surface);
   line-height: 1.2;
+}
+
+// Tablet / landscape and up: align heading with card column
+@media (min-width: 768px) {
+  .title-row {
+    display: grid;
+    grid-template-columns: 8rem 2.5rem 1fr;
+    column-gap: 0.75rem;
+  }
 }
