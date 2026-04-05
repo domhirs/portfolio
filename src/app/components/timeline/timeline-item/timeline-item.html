@@ -1,0 +1,21 @@
+<div class="timeline-grid">
+  <div class="date-col">{{ date() }}</div>
+
+  <div class="connector-col">
+    @if (isFirst()) {
+      <div class="dot-spacer"></div>
+    } @else {
+      <div class="line-above"></div>
+    }
+
+    <div class="dot"></div>
+
+    @if (!isLast()) {
+      <div class="line-below"></div>
+    }
+  </div>
+
+  <div class="card-col">
+    <ng-content></ng-content>
+  </div>
+</div>

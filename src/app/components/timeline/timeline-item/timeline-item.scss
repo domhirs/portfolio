@@ -1,0 +1,64 @@
+// Dot center aligns with card title:
+// card uses p-6 = 1.5rem top padding; dot radius = 6px
+// so line-above height = 1.5rem - 6px = 18px ≈ 1.125rem
+$line-above-h: 1.125rem;
+$dot-size: 12px;
+$timeline-accent: #3edc8a;
+$line-color: rgba(255, 255, 255, 0.12);
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 8rem 2.5rem 1fr;
+  column-gap: 0.75rem;
+}
+
+.date-col {
+  align-self: start;
+  padding-top: $line-above-h;
+  padding-right: 0.25rem;
+  text-align: right;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--theme-on-surface-variant);
+  white-space: nowrap;
+}
+
+.connector-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.dot-spacer {
+  height: $line-above-h;
+  flex-shrink: 0;
+}
+
+.line-above {
+  height: $line-above-h;
+  width: 2px;
+  background: $line-color;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: $dot-size;
+  height: $dot-size;
+  border-radius: 50%;
+  background: $timeline-accent;
+  box-shadow: 0 0 10px rgba(62, 220, 138, 0.45);
+  flex-shrink: 0;
+}
+
+.line-below {
+  flex: 1;
+  width: 2px;
+  background: $line-color;
+  margin-top: 4px;
+  min-height: 0.75rem;
+}
+
+.card-col {
+  padding-bottom: 1.5rem;
+}
