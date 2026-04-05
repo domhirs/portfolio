@@ -7,7 +7,7 @@
       <app-timeline [title]="'RESUME.EXPERIENCE' | translate">
         @for (item of workExperience(); track item.company; let first = $first; let last = $last) {
           <app-timeline-item
-            [date]="item.from + ' - ' + item.to"
+            [date]="formatDateRange(item.from, item.to)"
             [isFirst]="first"
             [isLast]="last"
           >
@@ -28,7 +28,7 @@
       <app-timeline [title]="'RESUME.EDUCATION' | translate">
         @for (item of education(); track item.institution; let first = $first; let last = $last) {
           <app-timeline-item
-            [date]="item.from + ' - ' + item.to"
+            [date]="formatDateRange(item.from, item.to)"
             [isFirst]="first"
             [isLast]="last"
           >

@@ -27,4 +27,11 @@ export class ResumeComponent {
     this.dataService.getExperience().subscribe(data => this.workExperience.set(data));
     this.dataService.getEducation().subscribe(data => this.education.set(data));
   }
+
+  formatDateRange(from: string, to: string): string {
+    if (!from && !to) return '';
+    if (!from || from === to) return to;
+    if (!to) return from;
+    return `${from} - ${to}`;
+  }
 }
