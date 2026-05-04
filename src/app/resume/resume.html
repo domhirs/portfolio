@@ -1,38 +1,46 @@
-<section class="min-h-dvh w-full py-20">
+<section class="min-h-dvh w-full py-20 bg-surface-low">
   <div class="container mx-auto px-4 w-full">
-    <h2 class="text-4xl text-center font-bold text-white mb-12">{{ 'RESUME.TITLE' | translate }}</h2>
+    <h2 class="text-4xl text-center font-bold text-on-surface mb-16">{{ 'RESUME.TITLE' | translate }}</h2>
 
-    <!-- Work Experience Section -->
     <div class="max-w-4xl mx-auto">
-      <h3 class="text-3xl font-bold text-white mb-8">{{ 'RESUME.EXPERIENCE' | translate }}</h3>
-      <div class="grid grid-cols-1 gap-8 mb-16">
-        @for (item of workExperience(); track item.company) {
-          <app-card [title]="item.position" [subtitle]="item.company + ' | ' + item.from + ' - ' + item.to">
-            <p class="text-gray-300 mb-4">{{ item.description }}</p>
-            @if (item.technologies && item.technologies.length > 0) {
-              <div class="flex flex-wrap gap-2">
-                @for (tech of item.technologies; track tech) {
-                  <span class="bg-gray-700/50 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">{{ tech }}</span>
-                }
-              </div>
-            }
-          </app-card>
-        }
-      </div>
-    </div>
 
-    <!-- Education Section -->
-    <div class="max-w-4xl mx-auto">
-      <h3 class="text-3xl font-bold text-white mb-8">{{ 'RESUME.EDUCATION' | translate }}</h3>
-      <div class="grid grid-cols-1 gap-8">
-        @for (item of education(); track item.institution) {
-          <app-card [title]="item.title" [subtitle]="item.institution + ' | ' + item.from + ' - ' + item.to">
-            @if (item.description) {
-              <p class="text-gray-300">{{ item.description }}</p>
-            }
-          </app-card>
+      <app-timeline [title]="'RESUME.EXPERIENCE' | translate">
+        @for (item of workExperience(); track item.company; let first = $first; let last = $last) {
+          <app-timeline-item
+            [date]="formatDateRange(item.from, item.to)"
+            [isFirst]="first"
+            [isLast]="last"
+          >
+            <app-card [title]="item.position" [subtitle]="item.company">
+              <p class="text-on-surface-variant mb-4">{{ item.description }}</p>
+              @if (item.technologies && item.technologies.length > 0) {
+                <div class="flex flex-wrap gap-2">
+                  @for (tech of item.technologies; track tech) {
+                    <span class="bg-accent-container/30 text-accent text-sm font-medium px-3 py-1 rounded-full">{{ tech }}</span>
+                  }
+                </div>
+              }
+            </app-card>
+          </app-timeline-item>
         }
-      </div>
+      </app-timeline>
+
+      <app-timeline [title]="'RESUME.EDUCATION' | translate">
+        @for (item of education(); track item.institution; let first = $first; let last = $last) {
+          <app-timeline-item
+            [date]="formatDateRange(item.from, item.to)"
+            [isFirst]="first"
+            [isLast]="last"
+          >
+            <app-card [title]="item.title" [subtitle]="item.institution">
+              @if (item.description) {
+                <p class="text-on-surface-variant">{{ item.description }}</p>
+              }
+            </app-card>
+          </app-timeline-item>
+        }
+      </app-timeline>
+
     </div>
   </div>
 </section>

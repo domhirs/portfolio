@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CardComponent } from '../components/card/card';
+import { TimelineComponent } from '../components/timeline/timeline';
+import { TimelineItemComponent } from '../components/timeline/timeline-item/timeline-item';
 import { Experience, Education } from '../models';
 import { TranslateModule } from '@ngx-translate/core';
 import { DataService } from '../data.service';
@@ -7,7 +9,7 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [CardComponent, TranslateModule],
+  imports: [CardComponent, TimelineComponent, TimelineItemComponent, TranslateModule],
   templateUrl: './resume.html',
   styleUrls: ['./resume.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -24,5 +26,12 @@ export class ResumeComponent {
   constructor() {
     this.dataService.getExperience().subscribe(data => this.workExperience.set(data));
     this.dataService.getEducation().subscribe(data => this.education.set(data));
+  }
+
+  formatDateRange(from: string, to: string): string {
+    if (!from && !to) return '';
+    if (!from || from === to) return to;
+    if (!to) return from;
+    return `${from} - ${to}`;
   }
 }

@@ -6,12 +6,13 @@ import { AboutComponent } from './about/about';
 import { ResumeComponent } from './resume/resume';
 import { ProjectsComponent } from './projects/projects';
 import { SkillsComponent } from './skills/skills';
-import { devIconProvider } from './icon.provider';
+import { appIconProvider } from './icon.provider';
 import { NgIcon } from '@ng-icons/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LanguageSelectorComponent } from './components/language-selector/language-selector';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, startWith } from 'rxjs';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ import { map, startWith } from 'rxjs';
   imports: [Header, HomeComponent, AboutComponent, ResumeComponent, ProjectsComponent, SkillsComponent, NgIcon, TranslateModule, LanguageSelectorComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
-  providers: [devIconProvider]
+  providers: [appIconProvider]
 })
 export class App {
   maintenance = signal(false);
@@ -36,6 +37,7 @@ export class App {
   readonly cvEnglishHref = signal('assets/files/Dominik_Hirsch_Full_Stack_Developer_CV_public_en.pdf');
 
   readonly translate = inject(TranslateService);
+  readonly theme = inject(ThemeService);
 
   // Reactive signal for current language
   readonly currentLang = toSignal(

@@ -1,4 +1,4 @@
-<section class="min-h-dvh w-full flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+<section class="min-h-dvh w-full flex flex-col items-center justify-center text-center px-4 overflow-hidden pt-16 md:pt-48 xl:pt-32 pb-20 bg-surface-low">
   <img
     ngSrc="assets/picture.png"
     alt="Profile Picture"
@@ -6,8 +6,8 @@
     width="512"
     height="512"
   />
-  <h1 class="text-4xl md:text-7xl font-bold text-white text-shadow-lg wrap-break-word max-w-full">{{ title() }}</h1>
-  <p class="mt-4 text-base md:text-lg font-semibold text-white text-shadow-lg">Full Stack Developer</p>
+  <h1 class="text-4xl md:text-7xl font-bold text-on-surface wrap-break-word max-w-full">{{ title() }}</h1>
+  <p class="mt-4 text-base md:text-lg font-semibold text-on-surface">Full Stack Developer</p>
 
   <app-list [title]="'Frontend'">
     <app-breadcrumb [label]="'Angular'">
@@ -48,6 +48,21 @@
     </app-breadcrumb>
     <app-breadcrumb [label]="'Shell'">
       <ng-icon name="diPowershellOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Traefik'">
+      <ng-icon name="diTraefikproxyOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Crowdsec'">
+      <ng-icon name="customCrowdsecOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Debian'">
+      <ng-icon name="diDebianOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Grafana'">
+      <ng-icon name="diGrafanaOriginal" class="mr-2"></ng-icon>
+    </app-breadcrumb>
+    <app-breadcrumb [label]="'Prometheus'">
+      <ng-icon name="diPrometheusOriginal" class="mr-2"></ng-icon>
     </app-breadcrumb>
     <app-breadcrumb [label]="'Datadog'">
       <ng-icon name="diDatadogOriginal" class="mr-2"></ng-icon>

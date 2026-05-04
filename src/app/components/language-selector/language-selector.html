@@ -1,5 +1,5 @@
 <div
-  class="flex items-center bg-gray-700/50 rounded-full p-1 border border-gray-600/50 transition-opacity"
+  class="flex items-center bg-surface-high rounded-full p-1 border border-muted/20 transition-opacity"
   [class.opacity-50]="disabled()"
   [class.cursor-not-allowed]="disabled()"
 >
@@ -7,10 +7,10 @@
     [disabled]="disabled()"
     (click)="selectLanguage('de')"
     class="px-3 py-1 rounded-full text-sm font-bold transition-all duration-200 ease-in-out"
-    [class.bg-white]="currentLang() === 'de'"
-    [class.text-gray-900]="currentLang() === 'de'"
-    [class.text-gray-400]="currentLang() !== 'de'"
-    [class.hover:text-white]="currentLang() !== 'de' && !disabled()"
+    [class.bg-surface-card]="currentLang() === 'de'"
+    [class.text-on-surface]="currentLang() === 'de'"
+    [class.text-on-surface-variant]="currentLang() !== 'de'"
+    [class.hover:text-on-surface]="currentLang() !== 'de' && !disabled()"
   >
     DE
   </button>
@@ -18,10 +18,10 @@
     [disabled]="disabled()"
     (click)="selectLanguage('en')"
     class="px-3 py-1 rounded-full text-sm font-bold transition-all duration-200 ease-in-out"
-    [class.bg-white]="currentLang() === 'en'"
-    [class.text-gray-900]="currentLang() === 'en'"
-    [class.text-gray-400]="currentLang() !== 'en'"
-    [class.hover:text-white]="currentLang() !== 'en' && !disabled()"
+    [class.bg-surface-card]="currentLang() === 'en'"
+    [class.text-on-surface]="currentLang() === 'en'"
+    [class.text-on-surface-variant]="currentLang() !== 'en'"
+    [class.hover:text-on-surface]="currentLang() !== 'en' && !disabled()"
   >
     EN
   </button>

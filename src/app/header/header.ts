@@ -3,7 +3,8 @@ import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from '../components/button/button';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LanguageSelectorComponent } from '../components/language-selector/language-selector';
-import {NgIcon} from '@ng-icons/core';
+import { NgIcon } from '@ng-icons/core';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ import {NgIcon} from '@ng-icons/core';
   templateUrl: './header.html',
   styleUrl: './header.scss',
   host: {
-    'class': 'fixed top-0 left-0 right-0 z-50 h-24 transition-colors duration-300 ease-in-out bg-gray-800/80 backdrop-blur-sm',
+    'class': 'fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out bg-gray-800/80 backdrop-blur-sm',
     '(window:scroll)': 'onWindowScroll()',
   }
 })
@@ -27,6 +28,7 @@ export class Header {
   readonly isScrolled = signal(false);
 
   readonly translate = inject(TranslateService);
+  readonly theme = inject(ThemeService);
 
   private readonly document = inject(DOCUMENT);
   private readonly window = this.document.defaultView;

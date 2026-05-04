@@ -8,32 +8,39 @@
 
 <!-- Mobile Menu Overlay (Root Level) -->
 @if (isMenuOpen()) {
-  <div class="fixed inset-0 bg-gray-900/90 backdrop-blur-lg z-100 flex flex-col items-center justify-center">
-    <button (click)="toggleMenu()" class="absolute top-8 right-8 text-white p-2">
+  <div class="fixed inset-0 bg-surface-low/95 backdrop-blur-lg z-100 flex flex-col items-center justify-center">
+    <button (click)="toggleMenu()" class="absolute top-8 right-8 text-on-surface p-2">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
     </button>
     <nav>
       <ul class="flex flex-col items-center space-y-8">
-        <li><a (click)="toggleMenu()" href="#home" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">{{ 'NAV.HOME' | translate }}</a></li>
-        <li><a (click)="toggleMenu()" href="#about" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">{{ 'NAV.ABOUT' | translate }}</a></li>
-        <li><a (click)="toggleMenu()" href="#resume" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">{{ 'NAV.RESUME' | translate }}</a></li>
-        <li><a (click)="toggleMenu()" href="#projects" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors">{{ 'NAV.PROJECTS' | translate }}</a></li>
+        <li><a (click)="toggleMenu()" href="#home" class="text-3xl font-bold text-on-surface hover:text-on-surface-variant transition-colors">{{ 'NAV.HOME' | translate }}</a></li>
+        <li><a (click)="toggleMenu()" href="#about" class="text-3xl font-bold text-on-surface hover:text-on-surface-variant transition-colors">{{ 'NAV.ABOUT' | translate }}</a></li>
+        <li><a (click)="toggleMenu()" href="#resume" class="text-3xl font-bold text-on-surface hover:text-on-surface-variant transition-colors">{{ 'NAV.RESUME' | translate }}</a></li>
+        <li><a (click)="toggleMenu()" href="#projects" class="text-3xl font-bold text-on-surface hover:text-on-surface-variant transition-colors">{{ 'NAV.PROJECTS' | translate }}</a></li>
         <li class="mt-4 flex flex-col gap-4 items-center">
-          <a (click)="toggleMenu()" [href]="contactHref()" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+          <a (click)="toggleMenu()" [href]="contactHref()" class="text-2xl font-bold text-surface bg-on-surface px-6 py-3 rounded-full shadow-lg hover:opacity-80 transition-opacity">
             {{ 'NAV.CONTACT' | translate }}
           </a>
-          <a (click)="toggleMenu()" [href]="currentCvHref()" target="_blank" class="text-2xl font-bold text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
+          <a (click)="toggleMenu()" [href]="currentCvHref()" target="_blank" class="text-2xl font-bold text-surface bg-on-surface px-6 py-3 rounded-full shadow-lg hover:opacity-80 transition-opacity flex items-center gap-2">
             {{ 'NAV.CV' | translate }}
             <ng-icon name="matDownloadOutline"></ng-icon>
           </a>
 
-          <!-- Mobile Language Switcher -->
-          <div class="mt-4">
+          <!-- Mobile Language Switcher + Theme Toggle -->
+          <div class="mt-4 flex items-center gap-3">
             <app-language-selector [currentLang]="translate.currentLang" [disabled]="false" (languageChange)="switchLanguage($event)"></app-language-selector>
+            <button (click)="theme.toggle()" class="text-accent hover:text-on-surface transition-colors" [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+              @if (theme.isDark()) {
+                <ng-icon name="bootstrapSunFill" class="text-3xl"></ng-icon>
+              } @else {
+                <ng-icon name="bootstrapMoonFill" class="text-3xl"></ng-icon>
+              }
+            </button>
           </div>
         </li>
         <li class="mt-4">
-          <a href="https://github.com/domhirs" target="_blank" class="text-gray-600/50 hover:text-gray-300 transition-colors flex items-center justify-center">
+          <a href="https://github.com/domhirs" target="_blank" class="text-muted hover:text-on-surface-variant transition-colors flex items-center justify-center">
             <ng-icon name="bootstrapGithub" class="text-4xl"></ng-icon>
           </a>
         </li>
@@ -44,8 +51,12 @@
 
 <main>
   <app-home id="home"></app-home>
+  <div class="h-px w-full bg-gradient-to-r from-surface-low from-[20%] via-muted/40 to-[80%] to-surface-low"></div>
   <app-skills id="skills"></app-skills>
+  <div class="h-px w-full bg-gradient-to-r from-surface-low from-[20%] via-muted/40 to-[80%] to-surface-low"></div>
   <app-about id="about"></app-about>
+  <div class="h-px w-full bg-gradient-to-r from-surface-low from-[20%] via-muted/40 to-[80%] to-surface-low"></div>
   <app-resume id="resume"></app-resume>
+  <div class="h-px w-full bg-gradient-to-r from-surface-low from-[20%] via-muted/40 to-[80%] to-surface-low"></div>
   <app-projects id="projects"></app-projects>
 </main>
